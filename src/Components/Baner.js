@@ -1,5 +1,5 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
-import big_banner from "../Assests/big_banner.png";
+import big_banner from "../Assests/Newbanner.png";
 import "./header.css";
 import Navbar from "./Navbar";
 import SmallNavbar from "./SmallNav";
@@ -11,7 +11,7 @@ function Banner() {
         display={{ base: "flex", lg: "flex" }}
         position="relative"
         width="100%"
-        height={{ base: "400px", lg: "580px" }}
+        height={{ base: "450px", lg: "580px" }}
         bgImage={big_banner}
         bgSize="cover"
         bgPosition="center"
