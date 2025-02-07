@@ -3,7 +3,11 @@ import big_banner from "../Assests/Newbanner.png";
 import "./header.css";
 import Navbar from "./Navbar";
 import SmallNavbar from "./SmallNav";
+import { useTranslation } from "react-i18next"; // Import i18n hook
+
 function Banner() {
+      const { t } = useTranslation(); // Access i18n object
+  
   return (
     <>
       <SmallNavbar />
@@ -52,28 +56,26 @@ function Banner() {
         <Flex
           position={"absolute"}
           flexDirection={"column"}
-          width={{ base: "100%", lg: "40%" }}
+          width={{ base: "100%", lg: "50%" }}
           alignItems={"center"}
         >
           <Text
-            fontWeight={900}
+            fontWeight={800}
             fontSize={{ base: "1.5rem", lg: "2.4rem" }}
             fontFamily="EkMukta"
             p="4"
             color="#F56A02"
           >
-            समाज समृद्ध-देश समृद्ध
+        {t("heading_new")}
           </Text>
           <Text
             textAlign={"center"}
             fontSize={{ base: "1.1rem", lg: "1.5rem" }}
             fontWeight={{ base: 600, lg: 500 }}
             fontFamily="EkMukta"
-            p="4"
+            p="2"
           >
-            स्वर्गीय सुरेश सिंह फाउंडेशन® ट्रस्ट का उद्देश्य व्यक्तियों के बीच
-            जागरूकता लाना एवं प्रचलित सामाजिक मुद्दों के समाधान हेतु उन्हें एक
-            साथ खड़ा करना है।
+            {t("heading_new2")}
           </Text>
         </Flex>
       </Box>

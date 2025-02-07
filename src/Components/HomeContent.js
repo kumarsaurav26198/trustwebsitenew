@@ -17,6 +17,8 @@ import "./epilo.css";
 import Water from "./DrinkingWater";
 import React, { useRef, useState } from "react";
 import Latest from "../Assests/latest.png";
+import { useTranslation } from "react-i18next"; // Import i18n hook
+
 
 const FlexItem = ({ bg, image, text }) => (
   <Flex
@@ -49,6 +51,8 @@ const FlexItem = ({ bg, image, text }) => (
 );
 
 const HomeContent = () => {
+    const { t } = useTranslation(); // Access i18n object
+  
   return (
     <>
       <Flex flexDirection={"column"} mt={-1} mb={20}>
@@ -64,32 +68,38 @@ const HomeContent = () => {
             <FlexItem
               bg={"#207FB7"}
               image={doctor}
-              text="निःशुल्क स्वास्थ्य जांच"
+              text={t('Free_Health_Checkup')}
             />
             <FlexItem
               bg={"#DB0C22"}
               image={eye}
-              text="निःशुल्क मोतियाबिंद ऑपरेशन"
+              text={t('Free_Cataract_Surgery')}
+              
+              // text="निःशुल्क मोतियाबिंद ऑपरेशन"
             />
             <FlexItem
               bg={"#08B749"}
               image={cycles}
-              text="तिपहिया साइकिल वितरण"
+              text={t('Tricycle_Distribution')}
             />
             <FlexItem
               bg={"#FFA800"}
               image={mach}
-              text="किसान भाइयों को कृषि हेतु आधुनिक यंत्र"
+              text={t('Modern_Agriculture_Equipments_for_Farmers')}
+
             />
             <FlexItem
               bg={"#3F00C0"}
               image={machine}
-              text="महिलाओं को स्वावलंबी बनाने हेतु सिलाई मशीन "
+              text={t('Sewing_Machines_for_Women_Empowerment')}
+              
+              // text="महिलाओं को स्वावलंबी बनाने हेतु सिलाई मशीन "
             />
             <FlexItem
               bg={"#FF5800"}
               image={marathon}
-              text="छात्र-छात्राओं की दौड़ स्पर्धा"
+              text={t('title3')}
+              // text="छात्र-छात्राओं की दौड़ स्पर्धा"
             />
           </Grid>
         </Flex>
@@ -127,10 +137,11 @@ const HomeContent = () => {
               fontWeight={"bold"}
               fontSize={{ base: "1rem", lg: "1.5rem" }}
             >
-              स्वर्गीय सुरेश सिंह फाउंडेशन® ट्रस्ट बिहार राज्य के बिहटा क्षेत्र
+              {t("heading_new3")}
+              {/* स्वर्गीय सुरेश सिंह फाउंडेशन® ट्रस्ट बिहार राज्य के बिहटा क्षेत्र
               के "लई ग्राम" में स्थित एक गैर-लाभकारी संगठन है। यह संगठन छात्रों,
               युवाओं और महिलाओं को सशक्त बनाकर समृद्ध समाज बनाने हेतु कृत संकल्प
-              है।
+              है। */}
             </Text>
             <Box
               width={"14%"}
@@ -160,10 +171,7 @@ const HomeContent = () => {
                   fontFamily={"EkMukta"}
                   fontWeight={400}
                 >
-                  महिलाओ को आत्मनिर्भर बनाने हेतु सिलाई मशीन का वितरण, ग्रामीण
-                  महिलाओं को आत्मनिर्भर बनाने हेतु आर्थिक सहायता राशि एवं
-                  ग्रामीण बहन-बेटियों को विवाहोत्सव पर आत्मनिर्भर एवं सशक्त बनने
-                  हेतु जरुरत स्वरूप सामग्री भेंट ।
+                  {t("Program_About4")}
                 </Text>
               </Box>
               <Box mt={4}>
@@ -205,13 +213,14 @@ const HomeContent = () => {
                   fontFamily={"EkMukta"}
                   fontWeight={400}
                 >
-                  यह संगठन छात्रों, युवाओं और महिलाओं को सशक्त बनाकर समृद्ध समाज
+                  {t("About2")}
+                  {/* यह संगठन छात्रों, युवाओं और महिलाओं को सशक्त बनाकर समृद्ध समाज
                   बनाने हेतु कार्य करता है। इसके लिए ट्रस्ट समाज से जुड़े कई
                   कार्य कर रहा है। जैसे – दिव्यांगजन को आवागमन हेतु तिपहिया
                   साईकिल का वितरण, जरुरतमंदों को अंग वस्त्र और कम्बल वितरण,
                   निःशुल्क स्वास्थ्य जांच शिविर का आयोजन जिसमें कई तरह के जांच
                   किये जाते है, दवा वितरण, निःशुल्क नेत्र जांच, चश्मा वितरण,
-                  अस्पताल में निःशुल्क मोतियाबिन्द ऑपरेशन ।
+                  अस्पताल में निःशुल्क मोतियाबिन्द ऑपरेशन । */}
                 </Text>
               </Box>
               <Box>
@@ -224,14 +233,17 @@ const HomeContent = () => {
                   fontFamily={"EkMukta"}
                   fontWeight={400}
                 >
-                  जरूरतमन्द विद्यार्थियों (कक्षा 10th and 12th) को पंजीकरण हेतु
+                  {t("Educational_Awareness_Program_About")}
+
+                  
+                  {/* जरूरतमन्द विद्यार्थियों (कक्षा 10th and 12th) को पंजीकरण हेतु
                   सहायता राशि, लेखन सामग्री, ग्रामीण विद्यालय में प्यूरीफायर
                   संयंत्र / आर० ओ०, पटना एथलेटिक्स संघ की निगरानी में
                   छात्र-छात्राओं की दौड़-स्पर्धा एवं स्वo सुरेश सिंह ग्रामीण
                   रात्रि क्रिकेट टूर्नामेंट का आयोजन, ग्रामीण मेधावी
                   छात्र-छात्राओं को गुणवत्तापूर्ण तकनीकी शिक्षा अध्ययन हेतु
                   लैपटॉप (कंप्यूटर) वितरण, आजीविका अर्जित कर परिवार का भरण-पोषण
-                  करने हेतु व्यावसायिक वाहन (ऑटो रिक्शा) वितरण ।
+                  करने हेतु व्यावसायिक वाहन (ऑटो रिक्शा) वितरण । */}
                 </Text>
               </Box>
               <Box>

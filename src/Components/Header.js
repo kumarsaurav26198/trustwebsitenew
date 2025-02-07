@@ -1,20 +1,23 @@
+import React from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Select from "react-select";
 import { LuPhoneCall } from "react-icons/lu";
 import { FiMail } from "react-icons/fi";
 import { TfiWorld } from "react-icons/tfi";
 import { FaYoutube, FaFacebookF, FaInstagram } from "react-icons/fa";
+import { useTranslation } from "react-i18next"; // Import i18n hook
 import "./header.css";
 
 const HeaderNav = () => {
+  const { t,i18n } = useTranslation(); // Access i18n object
+
   const languageOptions = [
+    { value: "hi", label: "हिन्दी" },
     { value: "en", label: "English" },
-    { value: "fr", label: "French" },
-    { value: "es", label: "Spanish" },
   ];
 
   const handleLanguageChange = (selectedOption) => {
-    console.log("Selected Language:", selectedOption.value);
+    i18n.changeLanguage(selectedOption.value); 
   };
 
   return (
@@ -55,11 +58,16 @@ const HeaderNav = () => {
         </Flex>
 
         <Flex alignItems="center" gap={4}>
-          {[
-            { icon: FaYoutube, link: "https://youtube.com/@lssftrust?si=-PjIzvdWyBxeFU6_" },
-            { icon: FaFacebookF, link: "https://www.facebook.com/lssftrust" },
-            { icon: FaInstagram, link: "https://www.instagram.com/lssf_trust/?hl=en" },
-          ].map(({ icon: Icon, link }, index) => (
+          {[{
+            icon: FaYoutube,
+            link: "https://youtube.com/@lssftrust?si=-PjIzvdWyBxeFU6_"
+          }, {
+            icon: FaFacebookF,
+            link: "https://www.facebook.com/lssftrust"
+          }, {
+            icon: FaInstagram,
+            link: "https://www.instagram.com/lssf_trust/?hl=en"
+          }].map(({ icon: Icon, link }, index) => (
             <Box key={index} py={{ base: 2, lg: 3 }} px={{ base: 2, lg: 3 }} background="#F78834" borderRadius="5px">
               <a href={link} target="_blank" rel="noopener noreferrer">
                 <Icon color="#FFFFFF" size={16} />
@@ -71,7 +79,7 @@ const HeaderNav = () => {
             <Select
               options={languageOptions}
               defaultValue={languageOptions[0]}
-              onChange={handleLanguageChange}  // Logs selected language
+              onChange={handleLanguageChange} // Logs selected language
               styles={{
                 control: (provided) => ({
                   ...provided,
