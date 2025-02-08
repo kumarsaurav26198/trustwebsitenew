@@ -43,6 +43,12 @@ const Footer = () => {
   const [ userData, setUserData ] = useState(null);
   const { t } = useTranslation();
 
+  const Privacy_Policy_collection_items = t('Privacy_Policy_collection_items', {
+    returnObjects: true,
+  });
+  const Privacy_Policy_collection_items2 = t('Privacy_Policy_collection_items2', {
+    returnObjects: true,
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -575,7 +581,7 @@ const Footer = () => {
                     fontSize={"1.6rem"}
                     color={"#F56A01"}
                   >
-                    Privacy Policy for LSSF TRUST
+                    {t("Privacy_Policy")}
                   </ModalHeader>
                   <ModalCloseButton />
                   <ModalBody>
@@ -597,17 +603,16 @@ const Footer = () => {
                         color="gray.600"
                         marginBottom="4"
                       >
-                        LSSF TRUST is committed to the ethical collection,
+                        {t("Privacy_Policy_heading1")}{" "}
+                        {/* LSSF TRUST is committed to the ethical collection,
                         retention, and use of information provided by you on our
-                        website{" "}
+                        website*/}
                         <span style={{ color: "blue", cursor: "pointer" }}>
                           www.lssftrust.org
                         </span>{" "}
-                        ('Site'). This Privacy Policy outlines how we collect,
-                        use, and protect your personal information.
+                        {t("Privacy_Policy_heading2")}
                       </Text>
 
-                      {/* Services Section */}
                       <Box>
                         <Heading
                           as="h3"
@@ -617,7 +622,7 @@ const Footer = () => {
                           color="gray.700"
                           fontWeight="bold"
                         >
-                          1. Collection of Personal Information
+                          {t("Privacy_Policy_collection_title")}
                         </Heading>
                         <Text
                           fontSize="md"
@@ -625,21 +630,19 @@ const Footer = () => {
                           color="gray.600"
                           marginBottom="4"
                         >
-                          We may collect the following personal information:
-                        </Text>
+                          {t('Privacy_Policy_collection_content')}
 
-                        <UnorderedList>
-                          <ListItem>Name</ListItem>
-                          <ListItem>Age</ListItem>
-                          <ListItem>Occupation</ListItem>
-                          <ListItem>Email and postal address</ListItem>
-                          <ListItem>Telephone number</ListItem>
-                          <ListItem>Payment processing details</ListItem>
-                          <ListItem>Limited personal details</ListItem>
-                          <ListItem>
-                            Any other data the website may require
-                          </ListItem>
-                        </UnorderedList>
+                          {/* We may collect the following personal information: */}
+                        </Text>
+                        {
+                          Array.isArray(Privacy_Policy_collection_items) &&
+                          Privacy_Policy_collection_items.map((item, index) => (
+                            <UnorderedList>
+                              <ListItem>{item}</ListItem>
+                            </UnorderedList>
+                          ))
+                        }
+
                       </Box>
                       <Box>
                         <Heading
@@ -650,7 +653,7 @@ const Footer = () => {
                           color="gray.700"
                           fontWeight="bold"
                         >
-                          2. Use of Personal Information
+                          {t("Privacy_Policy_use_title2")}
                         </Heading>
                         <Text
                           fontSize="md"
@@ -658,29 +661,17 @@ const Footer = () => {
                           color="gray.600"
                           marginBottom="4"
                         >
-                          LSSF TRUST uses personal information for the following
-                          purposes:
+                          {t("Privacy_Policy_collection_content2")}
                         </Text>
+                        {
+                          Array.isArray(Privacy_Policy_collection_items2) &&
+                          Privacy_Policy_collection_items2.map((item, index) => (
+                            <UnorderedList>
+                              <ListItem>{item}</ListItem>
+                            </UnorderedList>
+                          ))
+                        }
 
-                        <UnorderedList>
-                          <ListItem>
-                            Sending newsletters, updates, and promotional
-                            materials related to our activities.
-                          </ListItem>
-                          <ListItem>
-                            Processing donations and providing receipts.
-                          </ListItem>
-                          <ListItem>
-                            Maintaining an internal confidential database of all
-                            personal information collected from visitors to the
-                            Site.
-                          </ListItem>
-                          <ListItem>
-                            Evaluating and administering the Site's activities,
-                            responding to concerns, and assessing visitor
-                            trends.
-                          </ListItem>
-                        </UnorderedList>
                       </Box>
 
                       <Box>
@@ -692,7 +683,8 @@ const Footer = () => {
                           color="gray.700"
                           fontWeight="bold"
                         >
-                          3. Disclosure of Personal Information
+                          {t("Privacy_Policy_use_title3")}
+                          {/* 3. Disclosure of Personal Information */}
                         </Heading>
                         <Text
                           fontSize="md"
@@ -700,14 +692,15 @@ const Footer = () => {
                           color="gray.600"
                           marginBottom="4"
                         >
-                          Access to personal information is limited to
+                          {t("Privacy_Policy_collection_content3")}
+                          {/* Access to personal information is limited to
                           authorized personnel within LSSF TRUST. We may share
                           personal information with third parties involved in
                           the operation of our Site, such as payment processors
                           or email service providers. LSSF TRUST may also
                           disclose personal information if required by law or to
                           protect the rights and property of LSSF TRUST and its
-                          stakeholders.
+                          stakeholders. */}
                         </Text>
                       </Box>
 
@@ -720,7 +713,7 @@ const Footer = () => {
                           color="gray.700"
                           fontWeight="bold"
                         >
-                          4. Security
+                        {t("Privacy_Policy_use_title4")}
                         </Heading>
                         <Text
                           fontSize="md"
@@ -728,9 +721,10 @@ const Footer = () => {
                           color="gray.600"
                           marginBottom="4"
                         >
-                          LSSF TRUST uses appropriate security measures to
+                          {t("Privacy_Policy_collection_content4")}
+                          {/* LSSF TRUST uses appropriate security measures to
                           protect your personal information. However, we cannot
-                          guarantee the absolute security of your data.
+                          guarantee the absolute security of your data. */}
                         </Text>
                       </Box>
 
@@ -743,7 +737,8 @@ const Footer = () => {
                           color="gray.700"
                           fontWeight="bold"
                         >
-                          5. Copyright Protection
+                          {t("Privacy_Policy_use_title5")}
+                          {/* 5. Copyright Protection */}
                         </Heading>
                         <Text
                           fontSize="md"
@@ -751,10 +746,11 @@ const Footer = () => {
                           color="gray.600"
                           marginBottom="4"
                         >
-                          All content on this Site, including graphics, text,
+                          {t("Privacy_Policy_collection_content5")}
+                          {/* All content on this Site, including graphics, text,
                           logos, and software, is the property of LSSF TRUST and
                           protected by copyright laws. Unauthorized reproduction
-                          or use of the content is prohibited.
+                          or use of the content is prohibited. */}
                         </Text>
                       </Box>
 
@@ -767,7 +763,7 @@ const Footer = () => {
                           color="gray.700"
                           fontWeight="bold"
                         >
-                          6. Disclaimer
+                      {t("Privacy_Policy_use_title6")}
                         </Heading>
                         <Text
                           fontSize="md"
@@ -775,9 +771,10 @@ const Footer = () => {
                           color="gray.600"
                           marginBottom="4"
                         >
-                          LSSF TRUST does not guarantee the accuracy or
+                          {t("Privacy_Policy_collection_content6")}
+                          {/* LSSF TRUST does not guarantee the accuracy or
                           completeness of the information on the Site. Use of
-                          the Site and its content is at your own risk.
+                          the Site and its content is at your own risk. */}
                         </Text>
                       </Box>
                       <Box>
@@ -789,7 +786,7 @@ const Footer = () => {
                           color="gray.700"
                           fontWeight="bold"
                         >
-                          7. Changes to this Privacy Policy
+                        {t("Privacy_Policy_use_title7")}
                         </Heading>
                         <Text
                           fontSize="md"
@@ -797,9 +794,10 @@ const Footer = () => {
                           color="gray.600"
                           marginBottom="4"
                         >
-                          LSSF TRUST reserves the right to update this Privacy
+                          {t("Privacy_Policy_collection_content7")}
+                          {/* LSSF TRUST reserves the right to update this Privacy
                           Policy at any time. Changes will be posted on this
-                          page with an updated effective date.
+                          page with an updated effective date. */}
                         </Text>
                       </Box>
 
