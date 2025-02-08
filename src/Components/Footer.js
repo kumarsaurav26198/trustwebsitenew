@@ -36,13 +36,18 @@ import { FaInstagram } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import axios from "axios";
 const Footer = () => {
-  const [userData, setUserData] = useState(null);
+  const [ userData, setUserData ] = useState(null);
+  const { t } = useTranslation();
+
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
+      try
+      {
         // const response = await axios.get(
         //   "https://api.mbbsdunia.com/api/count"
         // );
@@ -51,7 +56,8 @@ const Footer = () => {
         );
         // console.log("check", response.data);
         setUserData(response.data);
-      } catch (error) {
+      } catch (error)
+      {
         console.error("Error:", error);
       }
     };
@@ -94,9 +100,10 @@ const Footer = () => {
         borderTop={"1px solid grey"}
       >
         <Text className="epilogue-bold" fontWeight={700} textAlign={"center"}>
-          Save lives: Donate to LSSF Trust for education, farmer aid, women's
+          {t("sells_live")}
+          {/* Save lives: Donate to LSSF Trust for education, farmer aid, women's
           empowerment, village support, sports incentives, and marriage
-          assistance.
+          assistance. */}
         </Text>
       </Box>
       <Flex
@@ -133,22 +140,28 @@ const Footer = () => {
             </Box>
             <Link to={"/"}>
               <Text fontFamily={"EkMukta"} fontWeight={600} fontSize={"0.9rem"}>
-                Home
+                {t("Home")}
               </Text>
             </Link>
             <Link to={"/about"}>
               <Text fontFamily={"EkMukta"} fontWeight={600} fontSize={"0.9rem"}>
-                About us
+                {t("About")}
+
+                {/* About us */}
               </Text>
             </Link>
             <Link to={"/annual"}>
               <Text fontFamily={"EkMukta"} fontWeight={600} fontSize={"0.9rem"}>
-                Annual Report
+                {t("Annual_Report")}
+
+                {/* Annual Report */}
               </Text>
             </Link>
             <Link to={"/certificate"}>
               <Text fontFamily={"EkMukta"} fontWeight={600} fontSize={"0.9rem"}>
-                Certification
+                {t("Certification")}
+
+                {/* Certification */}
               </Text>
             </Link>
 
@@ -161,7 +174,9 @@ const Footer = () => {
                 onClick={onOpenTnC}
                 cursor={"pointer"}
               >
-                Terms & Conditions
+                {t("Term_condi__heading1")}
+
+                {/* Terms & Conditions */}
               </Text>
 
               <Modal
@@ -181,7 +196,9 @@ const Footer = () => {
                     fontSize={"1.6rem"}
                     color={"#F56A01"}
                   >
-                    Terms & Conditions for LSSF TRUST
+                    {t("Term_condi__heading1")}
+
+                    {/* Terms & Conditions for LSSF TRUST */}
                   </ModalHeader>
                   <ModalCloseButton />
                   <ModalBody>
@@ -203,12 +220,13 @@ const Footer = () => {
                         color="gray.600"
                         marginBottom="4"
                       >
-                        Welcome to{" "}
+                        {t('Term_condi__heading2')}{" "}
                         <span style={{ color: "blue", cursor: "pointer" }}>
                           www.lssftrust.org
                         </span>{" "}
-                        By using our website, you agree to comply with and be
-                        bound by the following terms and conditions:
+                        {t("Term_condi__heading3")}
+                        {/* By using our website, you agree to comply with and be
+                        bound by the following terms and conditions: */}
                       </Text>
 
                       {/* Services Section */}
@@ -221,7 +239,7 @@ const Footer = () => {
                           color="gray.700"
                           fontWeight="bold"
                         >
-                          1. Use of the Website
+                          {t("Term_condi__collection_title")}
                         </Heading>
                         <Text
                           fontSize="md"
@@ -229,9 +247,10 @@ const Footer = () => {
                           color="gray.600"
                           marginBottom="4"
                         >
-                          The content on this Site is for general information
+                          {t("Term_condi__collection_content")}
+                          {/* The content on this Site is for general information
                           and use only. It is subject to change without notice.
-                          You agree to use the Site for lawful purposes only.
+                          You agree to use the Site for lawful purposes only. */}
                         </Text>
                       </Box>
                       <Box>
@@ -243,7 +262,7 @@ const Footer = () => {
                           color="gray.700"
                           fontWeight="bold"
                         >
-                          2. Intellectual Property
+                          {t("Term_condi__use_title2")}
                         </Heading>
                         <Text
                           fontSize="md"
@@ -251,9 +270,11 @@ const Footer = () => {
                           color="gray.600"
                           marginBottom="4"
                         >
-                          All materials on this Site, including text, images,
+                          {t("Term_condi__collection_content2")}
+
+                          {/* All materials on this Site, including text, images,
                           and software, are the property of LSSF TRUST.
-                          Unauthorized use or reproduction is prohibited.
+                          Unauthorized use or reproduction is prohibited. */}
                         </Text>
                       </Box>
 
@@ -266,7 +287,8 @@ const Footer = () => {
                           color="gray.700"
                           fontWeight="bold"
                         >
-                          3. Limitation of Liability
+                          {t("Term_condi__use_title3")}
+
                         </Heading>
                         <Text
                           fontSize="md"
@@ -274,11 +296,13 @@ const Footer = () => {
                           color="gray.600"
                           marginBottom="4"
                         >
-                          LSSF TRUST does not warrant the accuracy,
+                          {t("Term_condi__collection_content3")}
+
+                          {/* LSSF TRUST does not warrant the accuracy,
                           completeness, or suitability of the information on
                           this Site for any particular purpose. Your use of the
                           Site is at your own risk. We are not liable for any
-                          damages arising from your use of the Site.
+                          damages arising from your use of the Site. */}
                         </Text>
                       </Box>
 
@@ -291,7 +315,9 @@ const Footer = () => {
                           color="gray.700"
                           fontWeight="bold"
                         >
-                          4. External Links
+                          {t("Term_condi__use_title4")}
+
+                          {/* 4. External Links */}
                         </Heading>
                         <Text
                           fontSize="md"
@@ -299,9 +325,11 @@ const Footer = () => {
                           color="gray.600"
                           marginBottom="4"
                         >
-                          The Site may contain links to other websites. LSSF
+                          {t("Term_condi__collection_content4")}
+
+                          {/* The Site may contain links to other websites. LSSF
                           TRUST is not responsible for the content or privacy
-                          practices of these external sites.
+                          practices of these external sites. */}
                         </Text>
                       </Box>
 
@@ -314,7 +342,8 @@ const Footer = () => {
                           color="gray.700"
                           fontWeight="bold"
                         >
-                          5. Governing Law
+                          {t("Term_condi__use_title5")}
+
                         </Heading>
                         <Text
                           fontSize="md"
@@ -322,10 +351,12 @@ const Footer = () => {
                           color="gray.600"
                           marginBottom="4"
                         >
-                          These terms and conditions are governed by the laws of
+                          {t("Term_condi__collection_content5")}
+
+                          {/* These terms and conditions are governed by the laws of
                           India. Any disputes arising from the use of the Site
                           will be subject to the jurisdiction of the courts in
-                          India.
+                          India. */}
                         </Text>
                       </Box>
 
@@ -338,7 +369,8 @@ const Footer = () => {
                           color="gray.700"
                           fontWeight="bold"
                         >
-                          6. Changes to Terms & Conditions
+                          {t("Term_condi__use_title6")}
+
                         </Heading>
                         <Text
                           fontSize="md"
@@ -346,9 +378,11 @@ const Footer = () => {
                           color="gray.600"
                           marginBottom="4"
                         >
-                          LSSF TRUST reserves the right to modify these terms
+                          {t("Term_condi__collection_content6")}
+
+                          {/* LSSF TRUST reserves the right to modify these terms
                           and conditions at any time. Changes will be posted on
-                          this page with an updated effective date.
+                          this page with an updated effective date. */}
                         </Text>
                       </Box>
 
@@ -358,9 +392,11 @@ const Footer = () => {
                         color="gray.600"
                         marginBottom="4"
                       >
-                        By using our Site, you agree to these terms and
+                        {t("Term_condi__by")}
+
+                        {/* By using our Site, you agree to these terms and
                         conditions. If you do not agree, please do not use our
-                        Site.
+                        Site. */}
                       </Text>
                       <Text
                         fontSize="md"
@@ -368,7 +404,7 @@ const Footer = () => {
                         color="gray.600"
                         marginBottom="4"
                       >
-                        For any questions or concerns, please contact us at{" "}
+                        {t("Term_condi__by2")}{" "}
                         <span style={{ color: "blue", cursor: "pointer" }}>
                           www.lssftrust.org
                         </span>{" "}
@@ -390,7 +426,7 @@ const Footer = () => {
                 onClick={onOpenFnQ}
                 cursor={"pointer"}
               >
-                FAQ
+                {t("FAQs")}
               </Text>
 
               <Modal
@@ -410,307 +446,72 @@ const Footer = () => {
                     fontSize={"1.6rem"}
                     color={"#F56A01"}
                   >
-                    LSSF TRUST : Online Donations and Fundraising FAQs
+                    LSSF TRUST : {t("heading_FAQ")}
                   </ModalHeader>
                   <ModalCloseButton />
                   <ModalBody>
-                    <Accordion allowMultiple>
-                      <AccordionItem>
-                        {({ isExpanded }) => (
-                          <>
-                            <h2>
-                              <AccordionButton>
-                                <Box as="span" flex="1" textAlign="left">
-                                  How can I donate money online to LSSF TRUST?
-                                </Box>
-                                {isExpanded ? (
-                                  <MinusIcon fontSize="12px" />
-                                ) : (
-                                  <AddIcon fontSize="12px" />
+                    {[
+                      {
+                        question: t('question_FAQ1'),
+                        answer: t('answer_FAQ1'),
+                      },
+                      {
+                        question: t('question_FAQ2'),
+                        answer: t('answer_FAQ2'),
+                      },
+                      {
+                        question: t('question_FAQ3'),
+                        answer: t('answer_FAQ3'),
+                      },
+                      {
+                        question: t('question_FAQ4'),
+                        answer: t('answer_FAQ4'),
+                        details: t('details_FAQ4', { returnObjects: true }),
+                      },
+                      {
+                        question: t('question_FAQ5'),
+                        answer: t('answer_FAQ5'),
+                        details: t('details_FAQ5', { returnObjects: true }),
+                      },
+                      {
+                        question: t('question_FAQ6'),
+                        answer: t('answer_FAQ6'),
+                      },
+                      {
+                        question: t('question_FAQ7'),
+                        answer: t('answer_FAQ7'),
+                      },
+                      {
+                        question: t('question_FAQ8'),
+                        answer: t('answer_FAQ8'),
+                        details: t('details_FAQ8', { returnObjects: true }),
+                      },
+                    ].map(({ question, answer, details }, index) => (
+                      <Accordion allowMultiple key={index}>
+                        <AccordionItem>
+                          {({ isExpanded }) => (
+                            <>
+                              <h2>
+                                <AccordionButton>
+                                  <Box as="span" flex="1" textAlign="left">{question}</Box>
+                                  {isExpanded ? <MinusIcon fontSize="12px" /> : <AddIcon fontSize="12px" />}
+                                </AccordionButton>
+                              </h2>
+                              <AccordionPanel pb={4}>
+                                {answer}
+                                {details && (
+                                  <UnorderedList>
+                                    {details.map((detail, i) => <ListItem key={i}>{detail}</ListItem>)}
+                                  </UnorderedList>
                                 )}
-                              </AccordionButton>
-                            </h2>
-                            <AccordionPanel pb={4}>
-                              You can donate to LSSF TRUST by visiting our
-                              official website www.lssftrust.org. Simply click
-                              on the "Donate Now" button, choose your preferred
-                              donation amount, and follow the instructions to
-                              complete your donation. We accept various payment
-                              methods, including credit/debit cards and online
-                              banking.
-                            </AccordionPanel>
-                          </>
-                        )}
-                      </AccordionItem>
-                    </Accordion>
-
-                    <Accordion allowMultiple>
-                      <AccordionItem>
-                        {({ isExpanded }) => (
-                          <>
-                            <h2>
-                              <AccordionButton>
-                                <Box as="span" flex="1" textAlign="left">
-                                  What is the best online fundraising platform
-                                  for LSSF TRUST?
-                                </Box>
-                                {isExpanded ? (
-                                  <MinusIcon fontSize="12px" />
-                                ) : (
-                                  <AddIcon fontSize="12px" />
-                                )}
-                              </AccordionButton>
-                            </h2>
-                            <AccordionPanel pb={4}>
-                              LSSF TRUST uses trusted and secure online
-                              fundraising platforms to facilitate donations.
-                              While we accept direct donations through our
-                              website, we also collaborate with platforms like
-                              GiveIndia and GlobalGiving, which are known for
-                              their reliability and wide reach. These platforms
-                              offer a seamless donation experience and ensure
-                              that your contributions reach us safely.
-                            </AccordionPanel>
-                          </>
-                        )}
-                      </AccordionItem>
-                    </Accordion>
-
-                    <Accordion allowMultiple>
-                      <AccordionItem>
-                        {({ isExpanded }) => (
-                          <>
-                            <h2>
-                              <AccordionButton>
-                                <Box as="span" flex="1" textAlign="left">
-                                  Which are the best Online Donation Tools for
-                                  Non-profits?
-                                </Box>
-                                {isExpanded ? (
-                                  <MinusIcon fontSize="12px" />
-                                ) : (
-                                  <AddIcon fontSize="12px" />
-                                )}
-                              </AccordionButton>
-                            </h2>
-                            <AccordionPanel pb={4}>
-                              For non-profits like LSSF TRUST, the best online
-                              donation tools include:
-                              <UnorderedList>
-                                <ListItem>
-                                  Donorbox: Known for its user-friendly
-                                  interface and flexibility.
-                                </ListItem>
-                                <ListItem>
-                                  PayPal Giving Fund: Provides a trusted way to
-                                  accept donations.
-                                </ListItem>
-                                <ListItem>
-                                  Razorpay: Popular in India, offering secure
-                                  payment gateways.
-                                </ListItem>
-                                <ListItem>
-                                  Stripe: Offers robust tools for handling
-                                  online payments.
-                                </ListItem>
-                              </UnorderedList>
-                              These tools help streamline the donation process,
-                              making it easy for donors to contribute.
-                            </AccordionPanel>
-                          </>
-                        )}
-                      </AccordionItem>
-                    </Accordion>
-
-                    <Accordion allowMultiple>
-                      <AccordionItem>
-                        {({ isExpanded }) => (
-                          <>
-                            <h2>
-                              <AccordionButton>
-                                <Box as="span" flex="1" textAlign="left">
-                                  What is the best way to accept donations
-                                  online for LSSF TRUST?
-                                </Box>
-                                {isExpanded ? (
-                                  <MinusIcon fontSize="12px" />
-                                ) : (
-                                  <AddIcon fontSize="12px" />
-                                )}
-                              </AccordionButton>
-                            </h2>
-                            <AccordionPanel pb={4}>
-                              The best way to accept donations online is through
-                              a secure, user-friendly platform that supports
-                              various payment methods. LSSF TRUST uses a
-                              combination of direct website donations, secure
-                              payment gateways like Razorpay, and trusted
-                              fundraising platforms like GiveIndia. This
-                              approach ensures flexibility and security for our
-                              donors.
-                            </AccordionPanel>
-                          </>
-                        )}
-                      </AccordionItem>
-                    </Accordion>
-
-                    <Accordion allowMultiple>
-                      <AccordionItem>
-                        {({ isExpanded }) => (
-                          <>
-                            <h2>
-                              <AccordionButton>
-                                <Box as="span" flex="1" textAlign="left">
-                                  Tips to Help Non-profits Get Donations Online
-                                </Box>
-                                {isExpanded ? (
-                                  <MinusIcon fontSize="12px" />
-                                ) : (
-                                  <AddIcon fontSize="12px" />
-                                )}
-                              </AccordionButton>
-                            </h2>
-                            <AccordionPanel pb={4}>
-                              <Text>
-                                To effectively secure online donations, LSSF
-                                TRUST employs the following strategies:
-                              </Text>
-                              <Text>
-                                Clear and Compelling Message: Clearly articulate
-                                our mission and the impact of donations.
-                                User-Friendly Website: Ensure our website is
-                                easy to navigate, with visible "Donate Now"
-                                buttons. Multiple Payment Options: Offer various
-                                payment methods to cater to different donors.
-                                Regular Updates: Keep donors informed about how
-                                their contributions are making a difference.
-                                Engage on Social Media: Use social media
-                                platforms to reach a broader audience and
-                                encourage donations.
-                              </Text>
-                            </AccordionPanel>
-                          </>
-                        )}
-                      </AccordionItem>
-                    </Accordion>
-
-                    <Accordion allowMultiple>
-                      <AccordionItem>
-                        {({ isExpanded }) => (
-                          <>
-                            <h2>
-                              <AccordionButton>
-                                <Box as="span" flex="1" textAlign="left">
-                                  How can I get donations for an NGO like LSSF
-                                  TRUST?
-                                </Box>
-                                {isExpanded ? (
-                                  <MinusIcon fontSize="12px" />
-                                ) : (
-                                  <AddIcon fontSize="12px" />
-                                )}
-                              </AccordionButton>
-                            </h2>
-                            <AccordionPanel pb={4}>
-                              To get donations for LSSF TRUST, we:
-                              <UnorderedList>
-                                <ListItem>
-                                  Build a Strong Online Presence: Ensure our
-                                  website and social media are regularly updated
-                                  with our activities and impact stories.
-                                </ListItem>
-                                <ListItem>
-                                  Engage with Donors: Communicate regularly with
-                                  our donors, sharing success stories and
-                                  updates. Use Online Fundraising Platforms:
-                                  Utilize platforms like GiveIndia,
-                                  GlobalGiving, and others to reach a wider
-                                  audience.
-                                </ListItem>
-                                <ListItem>
-                                  Host Virtual Events: Organize webinars, online
-                                  auctions, and virtual meet-and-greets to
-                                  engage potential donors.
-                                </ListItem>
-                              </UnorderedList>
-                            </AccordionPanel>
-                          </>
-                        )}
-                      </AccordionItem>
-                    </Accordion>
-                    <Accordion allowMultiple>
-                      <AccordionItem>
-                        {({ isExpanded }) => (
-                          <>
-                            <h2>
-                              <AccordionButton>
-                                <Box as="span" flex="1" textAlign="left">
-                                  Is it safe to donate online to LSSF TRUST?
-                                </Box>
-                                {isExpanded ? (
-                                  <MinusIcon fontSize="12px" />
-                                ) : (
-                                  <AddIcon fontSize="12px" />
-                                )}
-                              </AccordionButton>
-                            </h2>
-                            <AccordionPanel pb={4}>
-                              Yes, it is safe to donate online to LSSF TRUST. We
-                              use secure payment gateways and adhere to the
-                              latest security standards to protect your personal
-                              and financial information. Our website and
-                              partnered platforms employ SSL encryption and
-                              other security measures to ensure your data is
-                              safe.
-                            </AccordionPanel>
-                          </>
-                        )}
-                      </AccordionItem>
-                    </Accordion>
-                    <Accordion allowMultiple>
-                      <AccordionItem>
-                        {({ isExpanded }) => (
-                          <>
-                            <h2>
-                              <AccordionButton>
-                                <Box as="span" flex="1" textAlign="left">
-                                  What is the best online fundraising platform?
-                                </Box>
-                                {isExpanded ? (
-                                  <MinusIcon fontSize="12px" />
-                                ) : (
-                                  <AddIcon fontSize="12px" />
-                                )}
-                              </AccordionButton>
-                            </h2>
-                            <AccordionPanel pb={4}>
-                              For LSSF TRUST, the best online fundraising
-                              platforms include:
-                              <UnorderedList>
-                                <ListItem>
-                                  GiveIndia: A reputable platform that supports
-                                  various non-profits in India.
-                                </ListItem>
-                                <ListItem>
-                                  GlobalGiving: An international platform that
-                                  helps NGOs raise funds for specific projects.
-                                </ListItem>
-                                <ListItem>
-                                  Donorbox: A versatile platform that integrates
-                                  easily with websites and supports recurring
-                                  donations.{" "}
-                                </ListItem>
-                                <ListItem>
-                                  PayPal Giving Fund: Offers a trusted and
-                                  global platform for receiving donations.
-                                </ListItem>
-                              </UnorderedList>
-                            </AccordionPanel>
-                          </>
-                        )}
-                      </AccordionItem>
-                    </Accordion>
+                              </AccordionPanel>
+                            </>
+                          )}
+                        </AccordionItem>
+                      </Accordion>
+                    ))}
                   </ModalBody>
+
                 </ModalContent>
               </Modal>
             </Box>
@@ -726,22 +527,22 @@ const Footer = () => {
           >
             <Link to={"/gallery"}>
               <Text fontFamily={"EkMukta"} fontWeight={600} fontSize={"0.9rem"}>
-                Gallery
+                {t("Gallery")}
               </Text>
             </Link>
             <Link to={"/event"}>
               <Text fontFamily={"EkMukta"} fontWeight={600} fontSize={"0.9rem"}>
-                Events
+                {t("Events")}
               </Text>
             </Link>
             <Link to={"/media"}>
               <Text fontFamily={"EkMukta"} fontWeight={600} fontSize={"0.9rem"}>
-                Media
+                {t("Media")}
               </Text>
             </Link>
             <Link to={"/contact"}>
               <Text fontFamily={"EkMukta"} fontWeight={600} fontSize={"0.9rem"}>
-                Contact Us
+                {t("Contact_us")}
               </Text>
             </Link>
 
@@ -754,7 +555,7 @@ const Footer = () => {
                 onClick={onOpenpnp}
                 cursor={"pointer"}
               >
-                privacy & Policy
+                {t("Privacy_Policy")}
               </Text>
 
               <Modal
@@ -1137,7 +938,7 @@ const Footer = () => {
                 Total Visitors
               </Text>
               <Grid
-                templateColumns={`repeat(${digits?.length}, 1fr)`}
+                templateColumns={`repeat(${ digits?.length }, 1fr)`}
                 gap={2}
                 justifyContent="center"
               >

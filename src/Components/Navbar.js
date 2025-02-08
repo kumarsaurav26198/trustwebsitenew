@@ -5,8 +5,10 @@ import "./header.css";
 import donate from "../Assests/donation.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
+import { useTranslation } from "react-i18next";
 export default function Navbar() {
-  const navigation =useNavigate()
+  const navigation = useNavigate();
+  const { t } = useTranslation();
 
   const location = useLocation();
 
@@ -42,7 +44,7 @@ export default function Navbar() {
                 fontSize={{ lg: "0.9rem" }}
                 className={isActive("/")}
               >
-                Home
+                {t('Home')}
               </Text>
             </Link>
 
@@ -53,7 +55,9 @@ export default function Navbar() {
                 fontSize={{ lg: "0.9rem" }}
                 className={isActive("/about")}
               >
-                About
+                {t('About')}
+
+
               </Text>
             </Link>
             <Link to={"/annual"}>
@@ -63,7 +67,9 @@ export default function Navbar() {
                 fontSize={{ lg: "0.9rem" }}
                 className={isActive("/annual")}
               >
-                Report
+                {t('Annual_Report')}
+
+                {/* Report */}
               </Text>
             </Link>
             <Link to={"/provision"}>
@@ -86,7 +92,8 @@ export default function Navbar() {
                 fontSize={{ lg: "0.9rem" }}
                 className={isActive("/certificate")}
               >
-                Certification
+                {t('Certification')}
+                {/* Certification */}
               </Text>
             </Link>
 
@@ -97,7 +104,9 @@ export default function Navbar() {
                 fontSize={{ lg: "0.9rem" }}
                 className={isActive("/gallery")}
               >
-                Gallary
+                {t('Gallery')}
+
+
               </Text>
             </Link>
             <Link to={"/event"}>
@@ -107,7 +116,8 @@ export default function Navbar() {
                 fontSize={{ lg: "0.9rem" }}
                 className={isActive("/event")}
               >
-                Events
+                {t('Events')}
+
               </Text>
             </Link>
 
@@ -118,7 +128,9 @@ export default function Navbar() {
                 fontSize={{ lg: "0.9rem" }}
                 className={isActive("/media")}
               >
-                Media
+                {t('Media')}
+
+
               </Text>
             </Link>
             <Link to={"/contact"}>
@@ -128,7 +140,9 @@ export default function Navbar() {
                 fontSize={{ lg: "0.9rem" }}
                 className={isActive("/contact")}
               >
-                Contact
+                {t('Contact_us')}
+
+                {/* Contact */}
               </Text>
             </Link>
           </HStack>
@@ -145,13 +159,13 @@ export default function Navbar() {
             fontWeight={700}
             fontSize={"1rem"}
             _hover={{
-              bg:"black"
-  
-              }}
-              onClick={()=>navigation("/whydonation")}
+              bg: "black"
+
+            }}
+            onClick={() => navigation("/whydonation")}
 
           >
-            Donation
+              {t('Donation')}
           </Button>
         </Flex>
       </Flex>

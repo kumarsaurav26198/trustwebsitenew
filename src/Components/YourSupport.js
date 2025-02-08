@@ -3,7 +3,11 @@ import s1 from "../Assests/s1.png";
 import "./epilo.css";
 import "./header.css";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 const YourSupport = () => {
+  const { t } = useTranslation();
+
   const navi = useNavigate();
   return (
     <Flex
@@ -17,7 +21,7 @@ const YourSupport = () => {
       alignItems="center"
       justifyContent="end"
       px={4}
-      // mb={2}
+    // mb={2}
     >
       <Flex
         width={"60%"}
@@ -34,7 +38,7 @@ const YourSupport = () => {
           fontWeight={900}
           fontSize={{ base: "1rem", lg: "1.4rem" }}
         >
-          "Your Support Matters – Get Involved!"
+          {t('support1')}
         </Text>
         <Text
           textAlign={"center"}
@@ -43,8 +47,10 @@ const YourSupport = () => {
           fontSize={{ base: "1rem", lg: "1.2rem" }}
           fontWeight={800}
         >
-          Your support can change the course of a woman's life. Help us provide
-          the education they deserve and the future they dream of.
+          {t('support2')}
+
+          {/* Your support can change the course of a woman's life. Help us provide
+          the education they deserve and the future they dream of. */}
         </Text>
 
         <Button
