@@ -23,6 +23,8 @@ import img122 from "../Assests/Final_Events/12C.JPG";
 import img13 from "../Assests/Final_Events/17B.JPG";
 import img14 from "../Assests/Final_Events/17A.JPG";
 import img15 from "../Assests/Final_Events/17.JPG";
+import { useTranslation } from "react-i18next";
+
 
 import line from "../Assests/line.png";
 import "./epilo.css";
@@ -33,6 +35,8 @@ const images = [
   [img10, img11, img14, img15],
 ];
 export default function Events() {
+  const { t } = useTranslation();
+
   return (
     <Flex
       bgGradient="linear(to-r, #b2ebcb, #ebfafa,#edfafc,#edf9fa)"
@@ -54,7 +58,7 @@ export default function Events() {
               fontSize={{ base: "1.8rem", lg: "2.6rem" }}
               fontWeight={800}
             >
-              Event Gallery
+              {t('Events')} {t('Gallery')} 
             </Text>
             <Box display={{ base: "none", lg: "flex" }} mt={2}>
               <Image width={"100%"} height={"100%"} src={line} alt="line" />

@@ -4,9 +4,13 @@ import water from "../Assests/water.png";
 import "./epilo.css";
 import "./header.css";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next"; // Import i18n hook
+
 
 const Water = () => {
   const navigation = useNavigate();
+      const { t } = useTranslation(); // Access i18n object
+  
 
   return (
     <Flex flexDirection={{ base: "column", lg: "row" }}>
@@ -30,7 +34,7 @@ const Water = () => {
             fontWeight={700}
             fontSize={{ base: "1.6rem", lg: "2.6rem" }}
           >
-            शैक्षिक जागरूकता कार्यक्रम :-
+            {t("title4")}:-
           </Heading>
           <Text
             fontFamily={"EkMukta"}
@@ -39,12 +43,15 @@ const Water = () => {
             color={"#000000"}
             fontWeight={400}
           >
+            {t("about4")}
+
+            {/* about4
             ट्रस्ट शिक्षा के महत्व और कम आय वाले परिवारों के लिए उपलब्ध अवसरों
             के बारे में जागरूकता फैलाने हेतु शैक्षिक जागरूकता कार्यक्रम आयोजित
             करता है। यह ट्रस्ट का साक्षरता, कौशल विकास और सीखने को बढ़ावा देने
             के लिए कार्यक्रम है। यहाँ जरूरतमन्द विद्यार्थियों (कक्षा 10th and
             12th) को पंजीकरण हेतु सहायता राशि एवं लेखन सामाग्री वितरित किया जाता
-            है ।
+            है । */}
           </Text>
           <Button
             width={{ base: "60%", lg: "40%" }}

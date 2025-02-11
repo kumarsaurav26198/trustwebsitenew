@@ -39,11 +39,15 @@ import "./epilo.css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./swiper.css";
+import { useTranslation } from "react-i18next";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { useNavigate } from "react-router-dom";
 import b1 from "../Assests/Members/b1.jpg";
 import a1 from "../Assests/Members/a1.jpeg";
+import { t } from 'i18next';
+
 const About = () => {
+  
   const advocate = [
     { id: "1", name: "Advocate Naveen Kumar Raheja", title: "(Legal Advisor)", img: a1 },
   ];
@@ -92,12 +96,16 @@ const About = () => {
             color={"black"}
             fontSize={{ base: "1rem", lg: "1rem" }}
           >
+
             स्वर्गीय सुरेश सिंह फाउंडेशन® ट्रस्ट द्वारा आयोजित निःशुल्क
             स्वास्थ्य जांच शिविर सामुदायिक कल्याण और सशक्तिकरण का प्रतीक है ।
             विशेषज्ञ डॉक्टरों की टीम के सहयोग से, शिविर में आने वाले जरूरतमंदों को
             चिकित्सा जांच एवं परामर्श प्रदान किया जाता है । इस कारण शिविर में
             बड़ी संख्या में लोग आते हैं, और विभिन्न सामाजिक-आर्थिक पृष्ठभूमि के
             लोग स्वास्थ्य सेवाओं का लाभ उठाते हैं ।
+
+            {/* {t('about1')} */}
+
           </Text>
           <Text
             width={"100%"}
