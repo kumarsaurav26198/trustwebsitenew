@@ -44,12 +44,18 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { useNavigate } from "react-router-dom";
 import b1 from "../Assests/Members/b1.jpg";
 import a1 from "../Assests/Members/a1.jpeg";
-import { t } from 'i18next';
+import { t } from "i18next";
 
 const About = () => {
-  
+  const { t } = useTranslation();
+
   const advocate = [
-    { id: "1", name: "Advocate Naveen Kumar Raheja", title: "(Legal Advisor)", img: a1 },
+    {
+      id: "1",
+      name: "Advocate Naveen Kumar Raheja",
+      title: "(Legal Advisor)",
+      img: a1,
+    },
   ];
 
   const activem = [
@@ -86,7 +92,7 @@ const About = () => {
             textAlign={{ base: "center", lg: "start" }}
             fontSize={{ base: "2rem", lg: "2.2rem" }}
           >
-            निःशुल्क स्वास्थ्य जांच शिविर :-
+            {t("a1")}
           </Text>
           <Text
             width={"100%"}
@@ -96,16 +102,7 @@ const About = () => {
             color={"black"}
             fontSize={{ base: "1rem", lg: "1rem" }}
           >
-
-            स्वर्गीय सुरेश सिंह फाउंडेशन® ट्रस्ट द्वारा आयोजित निःशुल्क
-            स्वास्थ्य जांच शिविर सामुदायिक कल्याण और सशक्तिकरण का प्रतीक है ।
-            विशेषज्ञ डॉक्टरों की टीम के सहयोग से, शिविर में आने वाले जरूरतमंदों को
-            चिकित्सा जांच एवं परामर्श प्रदान किया जाता है । इस कारण शिविर में
-            बड़ी संख्या में लोग आते हैं, और विभिन्न सामाजिक-आर्थिक पृष्ठभूमि के
-            लोग स्वास्थ्य सेवाओं का लाभ उठाते हैं ।
-
-            {/* {t('about1')} */}
-
+            {t("a2")}
           </Text>
           <Text
             width={"100%"}
@@ -115,13 +112,7 @@ const About = () => {
             color={"black"}
             fontSize={{ base: "1rem", lg: "1rem" }}
           >
-            ट्रस्ट स्वास्थ्य जांच पर ध्यान केंद्रित करके ग्रामीणों को बीमारियों
-            से राहत दिलाने की पहल करता है क्योंकि बेहतर स्वास्थ्य के लिए
-            जागरूकता और नियमित स्वास्थ्य जांच महत्वपूर्ण भूमिका निभाती है । यहाँ
-            रक्तचाप की जाँच से लेकर मधुमेह की जाँच तक किया जाता है । स्वास्थ्य
-            जांच में दाँतों एवं हड्डियों की जांच और उपचार किए जाते हैं । साथ
-            ही ग्रामीण लोगों को बुनियादी चिकित्सा सुविधाएं और आवश्यक उपकरण प्रदान
-            करके ट्रस्ट स्वस्थ गांव बनाने की पहल कर रहा है ।
+            {t("a3")}
           </Text>
           <Button
             borderRadius={"full"}
@@ -132,9 +123,9 @@ const About = () => {
             margin={{ base: "auto", lg: 0 }}
             onClick={() => navigation("/whydonation")}
             fontSize={"1rem"}
-            _hover={{background:"black"}}
+            _hover={{ background: "black" }}
           >
-            Donate Now
+            {t("a4")}
           </Button>
         </Flex>
         <Box
@@ -173,7 +164,6 @@ const About = () => {
               alt="about2"
             />
           </Flex>
-
           <Flex
             width={{ base: "100%", lg: "50%" }}
             flexDirection={"column"}
@@ -189,7 +179,7 @@ const About = () => {
               textAlign={{ base: "center", lg: "end" }}
               fontSize={{ base: "1.6rem", lg: "2rem" }}
             >
-              नेत्र जांच शिविर एवं मोतियाबिंद ऑपरेशन :-
+              {t("a5")}
             </Text>
             <Text
               width={"100%"}
@@ -199,28 +189,24 @@ const About = () => {
               color={"black"}
               fontSize={{ base: "1rem", lg: "1rem" }}
             >
-              जरूरतमंदों को आंखों का इलाज उपलब्ध करवाने हेतु ट्रस्ट की ओर से
-              निःशुल्क नेत्र जांच शिविर का आयोजन किया जाता है। यहां नेत्र रोगियों
-              की नवीनतम तकनीक से जांच एवं उपचार कर उन्हें निःशुल्क चश्मे वितरित
-              किए गए ।
-            </Text>
-            <Text
-              width={"100%"}
-              fontFamily={"EkMukta"}
-              textAlign={{ base: "center", lg: "end" }}
-              fontWeight={400}
-              color={"black"}
-              fontSize={{ base: "1rem", lg: "1rem" }}
-            >
-              नेत्र जांच के दौरान मोतियाबिंद से पीड़ित लोगों को ऑपरेशन हेतु उनकी
-              सहमति लेकर अत्याधुनिक मशीनों से सुसज्जित अस्पताल भेजा जाता है,
-              जहां उनका सफल ऑपरेशन एवं लेंस प्रत्यारोपण किया जाता है। इस दौरान
-              ट्रस्ट द्वारा मरीजों को निजी परिवहन, भोजन, दवाइयां और चश्मे की
-              नि:शुल्क सुविधा प्रदान की जाती हैं ।
+              {t("a6")}
             </Text>
           </Flex>
         </Flex>
       </Flex>
+
+      {/* hehe */}
+
+      <Text
+        width={"100%"}
+        fontFamily={"EkMukta"}
+        textAlign={{ base: "center", lg: "end" }}
+        fontWeight={400}
+        color={"black"}
+        fontSize={{ base: "1rem", lg: "1rem" }}
+      >
+        {t("a7")}
+      </Text>
 
       <Flex
         borderTop={"1px solid #999999"}
@@ -254,146 +240,139 @@ const About = () => {
         >
           <SwiperSlide>
             <Flex
-            py={2}
+              py={2}
               width={{ base: "90%", lg: "80%" }}
-              margin={"auto"}
+              margin="auto"
               flexDirection={{ base: "column", lg: "row" }}
               gap={{ base: 5, lg: 0 }}
-              justifyContent={"space-between"}
+              justifyContent="space-between"
             >
               <Flex
                 width={{ base: "100%", lg: "50%" }}
-                flexDirection={"column"}
+                flexDirection="column"
                 gap={5}
-                justifyContent={"center"}
+                justifyContent="center"
               >
                 <Text
                   width={{ base: "100%", lg: "80%" }}
                   className="epilogue-bold"
-                  fontWeight={"bold"}
-                  color={"#F56A02"}
+                  fontWeight="bold"
+                  color="#F56A02"
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  दवा वितरण :-
+                  {t("a8")}
                 </Text>
-                <Text
-                  width={"100%"}
-                  fontFamily={"EkMukta"}
-                  fontWeight={400}
-                  textAlign={{ base: "center", lg: "start" }}
-                  color={"black"}
-                  fontSize={{ base: "1rem", lg: "1rem" }}
-                >
-                  स्वर्गीय सुरेश सिंह फाउंडेशन® ट्रस्ट द्वारा आयोजित स्वास्थ्य
-                  जांच के दौरान लोगों को डॉक्टर द्वारा लिखित दवाइयां उपलब्ध कराई
-                  जाती हैं । यह कार्य ट्रस्ट के मिशन का एक महत्वपूर्ण हिस्सा है
-                  ।
-                </Text>
-              </Flex>
-              <Flex width={{ base: "100%", lg: "40%" }} alignItems={"center"}>
-                <Image margin={"auto"} src={slide1} alt="about2" />
-              </Flex>
-            </Flex>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Flex
-            py={2}
 
-              width={{ base: "90%", lg: "80%" }}
-              margin={"auto"}
-              flexDirection={{ base: "column", lg: "row" }}
-              gap={{ base: 5, lg: 0 }}
-              justifyContent={"space-between"}
-            >
-              <Flex
-                width={{ base: "100%", lg: "50%" }}
-                flexDirection={"column"}
-                gap={5}
-                justifyContent={"center"}
-              >
                 <Text
-                  width={{ base: "100%", lg: "80%" }}
-                  className="epilogue-bold"
-                  fontWeight={"bold"}
-                  color={"#F56A02"}
-                  textAlign={{ base: "center", lg: "start" }}
-                  fontSize={{ base: "1.6rem", lg: "2rem" }}
-                >
-                  शैक्षिक जागरूकता कार्यक्रम :-
-                </Text>
-                <Text
-                  width={"100%"}
-                  fontFamily={"EkMukta"}
+                  width="100%"
+                  fontFamily="EkMukta"
                   fontWeight={400}
                   textAlign={{ base: "center", lg: "start" }}
-                  color={"black"}
-                  fontSize={{ base: "1rem", lg: "1rem" }}
+                  color="black"
+                  fontSize="1rem"
                 >
-                  ट्रस्ट शिक्षा के महत्व और कम आय वाले परिवारों के लिए उपलब्ध
-                  अवसरों के बारे में जागरूकता फैलाने हेतु शैक्षिक जागरूकता
-                  कार्यक्रम आयोजित करता है। यह ट्रस्ट का साक्षरता, कौशल विकास और
-                  सीखने को बढ़ावा देने के लिए कार्यक्रम है। यहाँ जरूरतमन्द
-                  विद्यार्थियों (कक्षा 10th and 12th) को पंजीकरण हेतु सहायता राशि
-                  एवं लेखन सामाग्री वितरित किया जाता है ।
+                  {t("a9")}
                 </Text>
               </Flex>
-              <Flex width={{ base: "100%", lg: "30%" }} alignItems={"center"}>
-                <Image margin={"auto"} src={slide2} alt="about2" />
+
+              <Flex width={{ base: "100%", lg: "40%" }} alignItems="center">
+                <Image margin="auto" src={slide1} alt="about1" />
               </Flex>
             </Flex>
           </SwiperSlide>
 
           <SwiperSlide>
             <Flex
-            py={2}
-
+              py={2}
               width={{ base: "90%", lg: "80%" }}
-              margin={"auto"}
+              margin="auto"
               flexDirection={{ base: "column", lg: "row" }}
               gap={{ base: 5, lg: 0 }}
-              justifyContent={"space-between"}
+              justifyContent="space-between"
             >
               <Flex
                 width={{ base: "100%", lg: "50%" }}
-                flexDirection={"column"}
+                flexDirection="column"
                 gap={5}
-                justifyContent={"center"}
+                justifyContent="center"
               >
                 <Text
                   width={{ base: "100%", lg: "80%" }}
                   className="epilogue-bold"
-                  fontWeight={"bold"}
-                  color={"#F56A02"}
+                  fontWeight="bold"
+                  color="#F56A02"
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  ग्रामीण स्कूल में शुद्ध शीतल पेयजल हेतु वाटर कूलर / आर० ओ० :-
+                  {t("a10")}
                 </Text>
+
                 <Text
-                  width={"100%"}
-                  fontFamily={"EkMukta"}
+                  width="100%"
+                  fontFamily="EkMukta"
                   fontWeight={400}
                   textAlign={{ base: "center", lg: "start" }}
-                  color={"black"}
-                  fontSize={{ base: "1rem", lg: "1rem" }}
+                  color="black"
+                  fontSize="1rem"
                 >
-                  सामाजिक एवं धर्मार्थ कार्यो में निरंतर सक्रीय रहने वाले ट्रस्ट
-                  ने ग्रामीण छात्र-छात्राओं के स्वस्थ काया एवं गर्मी में शीतल जल
-                  हेतु ग्रामीण विद्यालय में प्यूरीफायर संयंत्र / आर० ओ० लगाए हैं
-                  ।
+                  {t("a11")}
                 </Text>
               </Flex>
-              <Flex width={{ base: "100%", lg: "30%" }} alignItems={"center"}>
-                <Image margin={"auto"} src={slide3} alt="about2" />
+
+              <Flex width={{ base: "100%", lg: "30%" }} alignItems="center">
+                <Image margin="auto" src={slide2} alt="about2" />
               </Flex>
             </Flex>
           </SwiperSlide>
 
           <SwiperSlide>
             <Flex
-            py={2}
+              py={2}
+              width={{ base: "90%", lg: "80%" }}
+              margin="auto"
+              flexDirection={{ base: "column", lg: "row" }}
+              gap={{ base: 5, lg: 0 }}
+              justifyContent="space-between"
+            >
+              <Flex
+                width={{ base: "100%", lg: "50%" }}
+                flexDirection="column"
+                gap={5}
+                justifyContent="center"
+              >
+                <Text
+                  width={{ base: "100%", lg: "80%" }}
+                  className="epilogue-bold"
+                  fontWeight="bold"
+                  color="#F56A02"
+                  textAlign={{ base: "center", lg: "start" }}
+                  fontSize={{ base: "1.6rem", lg: "2rem" }}
+                >
+                  {t("a12")}
+                </Text>
 
+                <Text
+                  width="100%"
+                  fontFamily="EkMukta"
+                  fontWeight={400}
+                  textAlign={{ base: "center", lg: "start" }}
+                  color="black"
+                  fontSize="1rem"
+                >
+                  {t("a13")}
+                </Text>
+              </Flex>
+
+              <Flex width={{ base: "100%", lg: "30%" }} alignItems="center">
+                <Image margin="auto" src={slide3} alt="about3" />
+              </Flex>
+            </Flex>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Flex
+              py={2}
               width={{ base: "90%", lg: "80%" }}
               margin={"auto"}
               flexDirection={{ base: "column", lg: "row" }}
@@ -414,7 +393,7 @@ const About = () => {
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  छात्र-छात्राओं की दौड़ स्पर्धा :-
+                  {t("a14")}
                 </Text>
                 <Text
                   width={"100%"}
@@ -424,13 +403,7 @@ const About = () => {
                   color={"black"}
                   fontSize={{ base: "1rem", lg: "1rem" }}
                 >
-                  ट्रस्ट प्रतिवर्ष 12 से 16 वर्ष आयु के छात्र-छात्राओं का दौड़
-                  स्पर्धा आयोजित करता है। इसकी निगरानी ट्रस्ट के अनुरोध पर पटना
-                  एथलेटिक्स संघ द्वारा निष्पक्ष रूप से किया जाता है एवं गणमान्य
-                  अतिथियों की उपस्थिति में प्रथम दस छात्र-छात्राओं को प्रोत्साहन
-                  राशि, प्रमाण पत्र एवं पदक से सम्मानित किया जाता हैं। यह
-                  कार्यक्रम न केवल शारीरिक आरोग्य को बढ़ावा देता है बल्कि
-                  अनुशासन जैसे मूल्यवान जीवन कौशल भी सिखाता है ।
+                  {t("a15")}
                 </Text>
               </Flex>
               <Flex width={{ base: "100%", lg: "40%" }} alignItems={"center"}>
@@ -441,8 +414,7 @@ const About = () => {
 
           <SwiperSlide>
             <Flex
-            py={2}
-
+              py={2}
               width={{ base: "90%", lg: "80%" }}
               margin={"auto"}
               flexDirection={{ base: "column", lg: "row" }}
@@ -463,8 +435,7 @@ const About = () => {
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  ग्रामीणों के लिए धार्मिक कार्य सुगम बनाने हेतु बोरवेल पंप की
-                  स्थापना :-
+                  {t("a16")}
                 </Text>
                 <Text
                   width={"100%"}
@@ -474,11 +445,7 @@ const About = () => {
                   color={"black"}
                   fontSize={{ base: "1rem", lg: "1rem" }}
                 >
-                  ट्रस्ट द्वारा ग्रामीणों को स्वच्छ पेयजल की निर्बाध आपूर्ति तथा
-                  धार्मिक गतिविधियों कार्य हेतु हो रहे असुविधा के समाधान के लिए
-                  बोरवेल लगाए गए हैं। बोरवेल लगने से स्थानीय लोगों, विशेषकर
-                  महिलाओं एवं बच्चों को काफी सुविधा मिली है, जिससे उन्हें
-                  धार्मिक कार्य (पूजा-पाठ) के लिए अधिक समय मिल रहा है ।
+                  {t("a17")}
                 </Text>
               </Flex>
               <Flex width={{ base: "100%", lg: "30%" }} alignItems={"center"}>
@@ -486,10 +453,10 @@ const About = () => {
               </Flex>
             </Flex>
           </SwiperSlide>
+
           <SwiperSlide>
             <Flex
-            py={2}
-
+              py={2}
               width={{ base: "90%", lg: "80%" }}
               margin={"auto"}
               flexDirection={{ base: "column", lg: "row" }}
@@ -510,8 +477,7 @@ const About = () => {
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  ग्रामीण महिला को आत्मनिर्भर बनाने हेतु सिलाई मशीन से सम्मानित
-                  :-
+                  {t("a18")}
                 </Text>
                 <Text
                   width={"100%"}
@@ -521,11 +487,7 @@ const About = () => {
                   color={"black"}
                   fontSize={{ base: "1rem", lg: "1rem" }}
                 >
-                  अति विशिष्ट कार्य को करने हेतु व्यावसायिक प्रशिक्षण आवश्यक है
-                  । यह आजीविका के लिए आवश्यक कौशल और ज्ञान से सशक्त बनाता है ।
-                  निपुण ग्रामीण जरूरतमंद माताओं-बहनों को जीविकोपार्जन एवं
-                  स्वावलंबी बनाने हेतु ट्रस्ट द्वारा प्रोत्साहन स्वरूप सिलाई
-                  मशीनें भेंट कीं जाती है ।
+                  {t("a19")}
                 </Text>
               </Flex>
               <Flex width={{ base: "100%", lg: "40%" }} alignItems={"center"}>
@@ -536,8 +498,7 @@ const About = () => {
 
           <SwiperSlide>
             <Flex
-            py={2}
-
+              py={2}
               width={{ base: "90%", lg: "80%" }}
               margin={"auto"}
               flexDirection={{ base: "column", lg: "row" }}
@@ -558,7 +519,7 @@ const About = () => {
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  महिलाओं को आत्मनिर्भर बनाने हेतु वित्तीय सहायता :-
+                  {t("a20")}
                 </Text>
                 <Text
                   width={"100%"}
@@ -568,12 +529,7 @@ const About = () => {
                   color={"black"}
                   fontSize={{ base: "1rem", lg: "1rem" }}
                 >
-                  महिलाओं को अपनी आजीविका हेतु किसी पर निर्भर न रहना पड़े, इसके
-                  लिए ट्रस्ट जरूरतमंद महिलाओं को आत्मनिर्भर बनाने हेतु महिला
-                  सशक्तिकरण के तहत वित्तीय सहायता प्रदान करता है। इस राशि से वे
-                  स्वरोजगार स्थापित कर स्वावलंबी बन सकती हैं। ट्रस्ट समाज के
-                  कल्याण, विशेषकर महिलाओं के सम्मान के लिए हमेशा उनके साथ खड़ा
-                  रहता है ।
+                  {t("a21")}
                 </Text>
               </Flex>
               <Flex width={{ base: "100%", lg: "30%" }} alignItems={"center"}>
@@ -584,8 +540,7 @@ const About = () => {
 
           <SwiperSlide>
             <Flex
-            py={2}
-
+              py={2}
               width={{ base: "90%", lg: "80%" }}
               margin={"auto"}
               flexDirection={{ base: "column", lg: "row" }}
@@ -606,7 +561,7 @@ const About = () => {
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  किसान भाइयों के सशक्तिकरण हेतु तकनीकी यंत्र वितरण :-
+                  {t("a22")}
                 </Text>
                 <Text
                   width={"100%"}
@@ -616,11 +571,7 @@ const About = () => {
                   color={"black"}
                   fontSize={{ base: "1rem", lg: "1rem" }}
                 >
-                  किसान भाइयों की फसलें कीटों और बीमारियों से प्रभावित न हो,
-                  इसके लिए ट्रस्ट ने कीटनाशकों के छिड़काव हेतु बैटरी संचालित
-                  आधुनिक कृषि यंत्र वितरित किए हैं। इसके अलावा कृषि से जुड़ी कई
-                  जानकारियां भी दी गई हैं। इससे उनकी उपज में उल्लेखनीय वृद्धि
-                  दर्ज की गई है, जो समृद्ध समाज में अहम भूमिका निभा रही है ।
+                  {t("a23")}
                 </Text>
               </Flex>
               <Flex width={{ base: "100%", lg: "40%" }} alignItems={"center"}>
@@ -631,8 +582,7 @@ const About = () => {
 
           <SwiperSlide>
             <Flex
-            py={2}
-
+              py={2}
               width={{ base: "90%", lg: "80%" }}
               margin={"auto"}
               flexDirection={{ base: "column", lg: "row" }}
@@ -653,7 +603,7 @@ const About = () => {
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  कम्बल एवं अंग वस्त्र वितरण :-
+                  {t("a24")}
                 </Text>
                 <Text
                   width={"100%"}
@@ -663,10 +613,7 @@ const About = () => {
                   color={"black"}
                   fontSize={{ base: "1rem", lg: "1rem" }}
                 >
-                  ठंड के कारण कठिनाइयों का सामना कर रहे जरूरतमंद लोगों की तत्काल
-                  जरूरतों को पूरा करने के लिए ट्रस्ट ने अपनी प्रतिबद्धता दिखाते
-                  हुए कंबल वितरित किए। इसी क्रम में ट्रस्ट ने जरूरतमंद महिलाओं
-                  को अंग वस्त्र वितरित किए ।
+                  {t("a25")}
                 </Text>
               </Flex>
               <Flex width={{ base: "100%", lg: "40%" }} alignItems={"center"}>
@@ -674,10 +621,10 @@ const About = () => {
               </Flex>
             </Flex>
           </SwiperSlide>
+
           <SwiperSlide>
             <Flex
-            py={2}
-
+              py={2}
               width={{ base: "90%", lg: "80%" }}
               margin={"auto"}
               flexDirection={{ base: "column", lg: "row" }}
@@ -698,7 +645,7 @@ const About = () => {
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  दिव्यांगजन (भाई-बहनों) को तिपहिया साइकिल :-
+                  {t("a26")}
                 </Text>
                 <Text
                   width={"100%"}
@@ -708,10 +655,7 @@ const About = () => {
                   color={"black"}
                   fontSize={{ base: "1rem", lg: "1rem" }}
                 >
-                  ग्रामीण क्षेत्रों में दिव्यांगजन (भाई-बहनों) के आवागमन में
-                  सुविधा हेतु ट्रस्ट ने उन्हें तिपहिया साइकिल प्रदान कीं, जिससे
-                  उनकी गतिशीलता में उल्लेखनीय सुधार हुआ है। ये तिपहिया साइकिल
-                  विभिन्न दिव्यांगजनों को ध्यान में रखकर बनाई गई हैं ।
+                  {t("a27")}
                 </Text>
               </Flex>
               <Flex width={{ base: "100%", lg: "40%" }} alignItems={"center"}>
@@ -722,8 +666,7 @@ const About = () => {
 
           <SwiperSlide>
             <Flex
-            py={2}
-
+              py={2}
               width={{ base: "90%", lg: "80%" }}
               margin={"auto"}
               flexDirection={{ base: "column", lg: "row" }}
@@ -744,7 +687,7 @@ const About = () => {
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  वृक्षारोपण कार्यक्रम :-
+                  {t("a28")}
                 </Text>
                 <Text
                   width={"100%"}
@@ -754,10 +697,7 @@ const About = () => {
                   color={"black"}
                   fontSize={{ base: "1rem", lg: "1rem" }}
                 >
-                  धरती पर वृक्ष के बिना मनुष्य, पशु, पक्षी या किसी भी जीव-जंतु
-                  के जीवन की कल्पना नहीं की जा सकती । ट्रस्ट वृक्षों के महत्व और
-                  पर्यावरण संरक्षण के बारे में जागरूकता फैलाने हेतु वृक्षारोपण
-                  कार्यक्रम आयोजित करता है ।
+                  {t("a29")}
                 </Text>
               </Flex>
               <Flex width={{ base: "100%", lg: "40%" }} alignItems={"center"}>
@@ -768,8 +708,7 @@ const About = () => {
 
           <SwiperSlide>
             <Flex
-            py={2}
-
+              py={2}
               width={{ base: "90%", lg: "80%" }}
               margin={"auto"}
               flexDirection={{ base: "column", lg: "row" }}
@@ -790,7 +729,7 @@ const About = () => {
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  ऑटो-रिक्शा वितरण :-
+                  {t("a30")}
                 </Text>
                 <Text
                   width={"100%"}
@@ -800,10 +739,7 @@ const About = () => {
                   color={"black"}
                   fontSize={{ base: "1rem", lg: "1rem" }}
                 >
-                  ट्रस्ट ने शिक्षित बेरोजगार ग्रामीण को व्यावसायिक वाहन (ऑटो
-                  रिक्शा) वितरित किए, जिसका उद्देश्य वे आत्मनिर्भर बन अपने
-                  स्वजनों का भरण-पोषण कर सकें। ट्रस्ट का यह कार्य आत्मनिर्भर एवं
-                  समृद्ध समाज की ओर एक कदम है ।
+                  {t("a31")}
                 </Text>
               </Flex>
               <Flex width={{ base: "100%", lg: "30%" }} alignItems={"center"}>
@@ -814,8 +750,7 @@ const About = () => {
 
           <SwiperSlide>
             <Flex
-            py={2}
-
+              py={2}
               width={{ base: "90%", lg: "80%" }}
               margin={"auto"}
               flexDirection={{ base: "column", lg: "row" }}
@@ -836,7 +771,7 @@ const About = () => {
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  फॉगिंग मशीन एवं कीटनाशक यंत्र वितरण :-
+                  {t("a32")}
                 </Text>
                 <Text
                   width={"100%"}
@@ -846,10 +781,7 @@ const About = () => {
                   color={"black"}
                   fontSize={{ base: "1rem", lg: "1rem" }}
                 >
-                  ग्रामीणों को संक्रामक बीमारियों से बचाने हेतु ट्रस्ट ने फॉगिंग
-                  मशीन एवं कीटनाशक उपकरण वितरित किए हैं, जिनके माध्यम से समय-समय
-                  पर ग्राम में फॉगिंग की जाती है । यह अभियान ग्रामीण क्षेत्रों
-                  को स्वच्छ एवं स्वस्थ बनाने में महत्वपूर्ण भूमिका निभा रहा है ।
+                  {t("a33")}
                 </Text>
               </Flex>
               <Flex width={{ base: "100%", lg: "30%" }} alignItems={"center"}>
@@ -857,10 +789,10 @@ const About = () => {
               </Flex>
             </Flex>
           </SwiperSlide>
+
           <SwiperSlide>
             <Flex
-            py={2}
-
+              py={2}
               width={{ base: "90%", lg: "80%" }}
               margin={"auto"}
               flexDirection={{ base: "column", lg: "row" }}
@@ -881,7 +813,7 @@ const About = () => {
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  लैपटॉप (कंप्यूटर) वितरण :-
+                  {t("a34")}
                 </Text>
                 <Text
                   width={"100%"}
@@ -891,11 +823,7 @@ const About = () => {
                   color={"black"}
                   fontSize={{ base: "1rem", lg: "1rem" }}
                 >
-                  ट्रस्ट द्वारा लैपटॉप (कंप्यूटर) के वितरण से लोगों को आधुनिक
-                  तकनीक से जुड़ने में मदद मिली है, जिससे उन्हें शिक्षा, कौशल
-                  विकास और आर्थिक अवसरों तक पहुंचने का अवसर मिला है । इस पहल के
-                  माध्यम से ट्रस्ट ने डिजिटल समावेशन और सामाजिक-आर्थिक उन्नति को
-                  बढ़ावा दिया है ।
+                  {t("a35")}
                 </Text>
               </Flex>
               <Flex width={{ base: "100%", lg: "30%" }} alignItems={"center"}>
@@ -904,10 +832,10 @@ const About = () => {
             </Flex>
           </SwiperSlide>
 
+          {/* hehe */}
           <SwiperSlide>
             <Flex
-            py={2}
-
+              py={2}
               width={{ base: "90%", lg: "80%" }}
               margin={"auto"}
               flexDirection={{ base: "column", lg: "row" }}
@@ -928,8 +856,7 @@ const About = () => {
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  बहनों के विवाहोत्सव पर उनके उज्जवल भविष्य हेतु जरूरत स्वरूप
-                  सामग्री भेंट :-
+                  {t("a36")}
                 </Text>
                 <Text
                   width={"100%"}
@@ -939,19 +866,18 @@ const About = () => {
                   color={"black"}
                   fontSize={{ base: "1rem", lg: "1rem" }}
                 >
-                  ट्रस्ट द्वारा बहन-बेटियों के विवाहोत्सव के शुभ अवसर पर उनके
-                  उज्ज्वल भविष्य हेतु आवश्यक सामग्री भेंट की है एवं भविष्य में
-                  भी ऐसा किया जाता रहेगा ।
+                  {t("a37")}
                 </Text>
               </Flex>
               <Flex width={{ base: "100%", lg: "30%" }} alignItems={"center"}>
-                <Image margin={"auto"} src={slide15} alt="about2" />
+                <Image margin={"auto"} src={slide17} alt="about3" />
               </Flex>
             </Flex>
           </SwiperSlide>
 
           <SwiperSlide>
             <Flex
+              py={2}
               width={{ base: "90%", lg: "80%" }}
               margin={"auto"}
               flexDirection={{ base: "column", lg: "row" }}
@@ -972,7 +898,7 @@ const About = () => {
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  सुगम आवागमन हेतु चौक-चौराहों पर एलईडी लगाया गया :-
+                  {t("a38")}
                 </Text>
                 <Text
                   width={"100%"}
@@ -982,16 +908,58 @@ const About = () => {
                   color={"black"}
                   fontSize={{ base: "1rem", lg: "1rem" }}
                 >
-                  ट्रस्ट की ओर से रात्रि के समय राहगीरों के आने-जाने वाले मार्ग
-                  को सुगम एवं सुरक्षित रखने हेतु चौक-चौराहों पर एलईडी लाइटों की
-                  व्यवस्था की गई है ।
+                  {t("a39")}
                 </Text>
               </Flex>
               <Flex width={{ base: "100%", lg: "30%" }} alignItems={"center"}>
-                <Image margin={"auto"} src={slide16} alt="about2" />
+                <Image margin={"auto"} src={slide18} alt="about4" />
               </Flex>
             </Flex>
           </SwiperSlide>
+
+          <SwiperSlide>
+            <Flex
+              py={2}
+              width={{ base: "90%", lg: "80%" }}
+              margin={"auto"}
+              flexDirection={{ base: "column", lg: "row" }}
+              gap={{ base: 5, lg: 0 }}
+              justifyContent={"space-between"}
+            >
+              <Flex
+                width={{ base: "100%", lg: "50%" }}
+                flexDirection={"column"}
+                gap={5}
+                justifyContent={"center"}
+              >
+                <Text
+                  width={{ base: "100%", lg: "80%" }}
+                  className="epilogue-bold"
+                  fontWeight={"bold"}
+                  color={"#F56A02"}
+                  textAlign={{ base: "center", lg: "start" }}
+                  fontSize={{ base: "1.6rem", lg: "2rem" }}
+                >
+                  {t("a40")}
+                </Text>
+                <Text
+                  width={"100%"}
+                  fontFamily={"EkMukta"}
+                  fontWeight={400}
+                  textAlign={{ base: "center", lg: "start" }}
+                  color={"black"}
+                  fontSize={{ base: "1rem", lg: "1rem" }}
+                >
+                  {t("a41")}
+                </Text>
+              </Flex>
+              <Flex width={{ base: "100%", lg: "30%" }} alignItems={"center"}>
+                <Image margin={"auto"} src={slide5} alt="about5" />
+              </Flex>
+            </Flex>
+          </SwiperSlide>
+
+          {/* hehef */}
 
           <SwiperSlide>
             <Flex
@@ -1015,7 +983,7 @@ const About = () => {
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  सैनिटाइजर मशीन व स्टैण्ड वितरण :-
+                  {t("a42")}
                 </Text>
                 <Text
                   width={"100%"}
@@ -1025,9 +993,7 @@ const About = () => {
                   color={"black"}
                   fontSize={{ base: "1rem", lg: "1rem" }}
                 >
-                  ग्रामीणों की सेवा में सदैव तत्पर रहने वाली ट्रस्ट ने कोरोना
-                  महामारी के समय बचाव हेतु सैनिटाइजर, सैनिटाइजर मशीन एवं स्टैंड
-                  वितरित किए गए थे ।
+                  {t("a43")}
                 </Text>
               </Flex>
               <Flex width={{ base: "100%", lg: "40%" }} alignItems={"center"}>
@@ -1058,7 +1024,7 @@ const About = () => {
                   textAlign={{ base: "center", lg: "start" }}
                   fontSize={{ base: "1.6rem", lg: "2rem" }}
                 >
-                  स्वo सुरेश सिंह ग्रामीण रात्रि क्रिकेट टूर्नामेंट का आयोजन :-
+                  {t("a44")}
                 </Text>
                 <Text
                   width={"100%"}
@@ -1068,10 +1034,7 @@ const About = () => {
                   color={"black"}
                   fontSize={{ base: "1rem", lg: "1rem" }}
                 >
-                  युवाओं में खेल के प्रति उत्साह को देखते हुए ट्रस्ट की ओर से
-                  स्वर्गीय सुरेश सिंह ग्रामीण रात्रि क्रिकेट टूर्नामेंट का सफल
-                  आयोजन किया गया है। उम्मीद है कि यह टूर्नामेंट भविष्य में भी
-                  प्रति वर्ष आयोजित किया जाता रहेगा ।
+                  {t("a45")}
                 </Text>
               </Flex>
               <Flex width={{ base: "100%", lg: "40%" }} alignItems={"center"}>
@@ -1105,11 +1068,10 @@ const About = () => {
           fontWeight={"bold"}
           color={"#F56A02"}
         >
-          Board Member
+          {t("a46")}
         </Text>
 
         <Grid
-          // width={{ base: "90%", lg: "80%" }}
           templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(3, 1fr)" }}
           py={12}
           gap={{ base: 6, lg: 2 }}
@@ -1125,13 +1087,7 @@ const About = () => {
               bg="white"
               cursor="pointer"
             >
-              <Image
-                src={b1}
-                alt={"board"}
-                // width={{ base: "90%", lg: "100%" }}
-                margin={"auto"}
-                // height={{ base: "280px", lg: "400px" }}
-              />
+              <Image src={b1} alt={"board"} margin={"auto"} />
 
               <Flex
                 flexDirection={"column"}
@@ -1152,7 +1108,7 @@ const About = () => {
                   fontWeight={"bold"}
                   fontSize={{ base: "0.7rem", lg: "1.1rem" }}
                 >
-                  (Founder Chairman)
+                  {t("a47")}
                 </Text>
               </Flex>
             </Box>
@@ -1173,59 +1129,45 @@ const About = () => {
           fontWeight={"bold"}
           color={"#F56A02"}
         >
-          Legal Advisor
+          {t("a48")}
         </Text>
 
         <Grid
-          // width={{ base: "90%", lg: "80%" }}
           templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(3, 1fr)" }}
           py={{ base: 8, lg: 12 }}
           gap={{ base: 6, lg: 10 }}
         >
           {advocate.map((ele) => (
-          <GridItem bg={"white"} borderRadius="md">
-          <Box
-            width={{ base: "100%", lg: "100%" }}
-            border="1px solid grey"
-            borderRadius="md"
-            overflow="hidden"
-            boxShadow="sm"
-            height={"100%"}
-            bg="white"
-            cursor="pointer"
-          >
-            <Image
-              src={ele.img}
-              alt={"board"}
-              // width={{ base: "90%", lg: "100%" }}
-              margin={"auto"}
-              // height={{ base: "280px", lg: "400px" }}
-            />
+            <GridItem bg={"white"} borderRadius="md">
+              <Box
+                width={{ base: "100%", lg: "100%" }}
+                border="1px solid grey"
+                borderRadius="md"
+                overflow="hidden"
+                boxShadow="sm"
+                height={"100%"}
+                bg="white"
+                cursor="pointer"
+              >
+                <Image src={ele.img} alt={"board"} margin={"auto"} />
 
-            <Flex
-              flexDirection={"column"}
-              alignItems={"center"}
-              gap={1}
-              marginTop={2}
-            >
-              <Text
-                className="epilogue-bold"
-                fontWeight={"bold"}
-                fontSize={{ base: "1rem", lg: "1.4rem" }}
-                color={"#F56A02"}
-              >
-                {ele.name}
-              </Text>
-              {/* <Text
-                className="epilogue-bold"
-                fontWeight={"bold"}
-                fontSize={{ base: "0.7rem", lg: "1.1rem" }}
-              >
-                {ele.title}
-              </Text> */}
-            </Flex>
-          </Box>
-        </GridItem>
+                <Flex
+                  flexDirection={"column"}
+                  alignItems={"center"}
+                  gap={1}
+                  marginTop={2}
+                >
+                  <Text
+                    className="epilogue-bold"
+                    fontWeight={"bold"}
+                    fontSize={{ base: "1rem", lg: "1.4rem" }}
+                    color={"#F56A02"}
+                  >
+                    {ele.name}
+                  </Text>
+                </Flex>
+              </Box>
+            </GridItem>
           ))}
         </Grid>
       </Flex>
@@ -1243,7 +1185,7 @@ const About = () => {
           fontSize={{ base: "1.1rem", lg: "1.5rem" }}
           color={"#F56A02"}
         >
-          volunteers
+          {t("a50")}
         </Text>
         <Flex flexDirection={"column"}>
           <UnorderedList>
