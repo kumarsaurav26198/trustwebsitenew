@@ -15,8 +15,8 @@
   "Privacy_Policy": "Privacy Policy",
   "Contact_us": "Contact Us",
   "FAQs": "FAQs",
-  "heading_new":"Prosperous society-prosperous country",
-  "heading_new2":"Late Suresh Singh Foundation® Trust aims to create awareness among individuals and bring them together to find solutions to prevalent social issues.",
+  "heading_new": "Prosperous society-prosperous country",
+  "heading_new2": "Late Suresh Singh Foundation® Trust aims to create awareness among individuals and bring them together to find solutions to prevalent social issues.",
   "heading_new3": "The Late Suresh Singh Foundation® Trust is a non-profit organization located in the 'Lai Gram' area of Bihar state's Bihta region. This organization is committed to building a prosperous society by empowering students, youth, and women.",
   "Free_Health_Checkup": "Free Health Checkup",
   "Free_Cataract_Surgery": "Free Cataract Surgery",
@@ -65,6 +65,70 @@
   "about14": "The trust's distribution of laptops (computers) has helped people connect with modern technology, providing them access to education, skill development, and economic opportunities. Through this initiative, the trust has promoted digital inclusion and socio-economic progress.",
   "about15": "On the auspicious occasion of weddings of daughters and sisters, the trust provides essential materials for their bright future and continues to do so in the future as well.",
   "about16": "To ensure safe and convenient travel for pedestrians during nighttime, the trust has installed LED lights at key intersections and crossroads.",
+
+  "a1": "Free Health Checkup Camp :-",
+  "a2": "The Free Health Checkup Camp organized by Late Suresh Singh Foundation® Trust is a symbol of community welfare and empowerment. With the support of a team of specialist doctors, the camp provides medical checkups and consultations to the needy. As a result, a large number of people attend the camp, benefiting from healthcare services regardless of their socio-economic background.",
+  "a3": "Focusing on health checkups, the trust aims to relieve villagers from diseases because awareness and regular health checkups play a crucial role in maintaining good health. Here, tests are conducted for blood pressure, diabetes, and more. Dental and orthopedic checkups and treatments are also provided. Additionally, by offering basic medical facilities and essential equipment, the trust is taking initiatives to create a healthier village.",
+  "a4": "Donate Now",
+  "a5": "Eye Checkup Camp and Cataract Surgery :-",
+  "a6": "To provide eye treatment to those in need, the trust organizes free eye checkup camps. Here, eye patients undergo examinations and treatment with the latest technology, and free spectacles are distributed to them.",
+
+  "a7": "During the eye checkup, individuals suffering from cataracts are sent to a well-equipped hospital with advanced machines after obtaining their consent. There, they undergo successful surgery and lens implantation. During this period, the trust provides free facilities such as private transportation, food, medicines, and spectacles for the patients.",
+  "a8": "Medicine Distribution :-",
+
+  "a9": "During the health checkup organized by the Late Suresh Singh Foundation® Trust, medicines prescribed by doctors are provided to the people. This initiative is a crucial part of the trust's mission.",
+  "a10": "Educational Awareness Program :-",
+  "a11": "The trust organizes educational awareness programs to spread awareness about the importance of education and the opportunities available for low-income families. This program promotes literacy, skill development, and learning. Here, necessary financial assistance for registration and writing materials are distributed to needy students (Class 10th and 12th).",
+  "a12": "Water Cooler / RO for Pure Drinking Water in Rural Schools :-",
+  "a13": "The trust, which remains actively engaged in social and charitable activities, has installed purifier plants / RO systems in rural schools to provide clean and cool drinking water for the well-being of students, especially during the summer.",
+
+  "a14": "Students' Running Competition :-",
+  "a15": "The trust organizes an annual running competition for students aged 12 to 16 years. The Patna Athletics Association monitors the event impartially at the trust’s request. The top ten students are awarded incentive prizes, certificates, and medals in the presence of distinguished guests. This program not only promotes physical fitness but also teaches valuable life skills such as discipline.",
+  "a16": "Installation of Borewell Pumps to Facilitate Religious Activities for Villagers :-",
+  "a17": "To ensure an uninterrupted supply of clean drinking water and to solve the issues faced by villagers during religious activities, the trust has installed borewells. This has greatly benefited local people, especially women and children, giving them more time for religious practices (prayers and rituals).",
+
+  "a18": "Honoring Rural Women with Sewing Machines for Self-Reliance :-",
+  "a19": "Vocational training is essential for specialized work. It empowers individuals with the necessary skills and knowledge for livelihood. To help skilled and needy rural mothers and sisters become self-reliant, the trust provides sewing machines as an encouragement.",
+  "a20": "Financial Assistance for Women’s Self-Reliance :-",
+  "a21": "To ensure women do not have to depend on others for their livelihood, the trust provides financial assistance under women empowerment programs. This fund enables them to start their own businesses and become self-sufficient. The trust always stands with society’s welfare, especially for the dignity of women.",
+  "a22": "Distribution of Technical Equipment for Farmers' Empowerment :-",
+  "a23": "To protect farmers' crops from pests and diseases, the trust has distributed battery-operated modern agricultural sprayers. Additionally, several agricultural insights have been shared with them. This has significantly increased their crop yields, playing a vital role in building a prosperous society.",
+
+  "a24": "Distribution of Blankets and Clothes :-",
+  "a25": "To fulfill the immediate needs of people struggling in the cold, the trust has shown its commitment by distributing blankets. Similarly, the trust has distributed clothes to needy women.",
+  "a26": "Tricycles for Differently-Abled Individuals :-",
+  "a27": "To facilitate the movement of differently-abled individuals in rural areas, the trust has provided tricycles, significantly improving their mobility. These tricycles are specially designed for various types of differently-abled individuals.",
+  "a28": "Tree Plantation Program :-",
+  "a29": "Life on Earth—whether human, animal, bird, or any living being—cannot be imagined without trees. The trust organizes tree plantation programs to raise awareness about the importance of trees and environmental conservation.",
+
+  "a30": "Distribution of Auto-Rickshaws :-",
+  "a31": "The trust has distributed commercial vehicles (auto-rickshaws) to educated unemployed rural individuals to help them become self-reliant and support their families. This initiative is a step towards a self-sufficient and prosperous society.",
+  "a32": "Distribution of Fogging Machines and Pesticide Sprayers :-",
+  "a33": "To protect villagers from infectious diseases, the trust has distributed fogging machines and pesticide sprayers. These are used periodically in villages to maintain cleanliness and a healthy environment.",
+  "a34": "Distribution of Laptops (Computers) :-",
+  "a35": "By distributing laptops (computers), the trust has helped people connect with modern technology, giving them access to education, skill development, and economic opportunities. This initiative promotes digital inclusion and socio-economic growth.",
+
+  "a36": "Distribution of Ration to Poor Families :-",
+  "a37": "The trust regularly distributes ration supplies to needy and poor families to ensure food security, providing relief to many people.",
+
+  "a38": "Distribution of Books and Stationery in Schools :-",
+  "a39": "To support students' education, the trust has distributed books and stationery in several schools, aiding their studies.",
+
+  "a40": "Organization of Health Camps :-",
+  "a41": "By organizing free health check-up camps, the trust has provided medical assistance in rural areas, benefiting many people.",
+
+  "a42": "Distribution of Sanitizer Machines and Stands :-",
+  "a43": "The trust, always dedicated to serving the rural population, distributed sanitizers, sanitizer machines, and stands during the COVID-19 pandemic for protection.",
+
+  "a44": "Late Suresh Singh Rural Night Cricket Tournament :-",
+  "a45": "Recognizing the enthusiasm of youth towards sports, the trust successfully organized the Late Suresh Singh Rural Night Cricket Tournament. It is hoped that this tournament will continue to be held annually in the future.",
+
+  "a46": "Board Member",
+  "a47": "(Founder Chairman)",
+  "a48": "Legal Advisor",
+  "a49": "Our legal advisors provide guidance and support to our organization.",
+  "a50": "Volunteers",
+  "a51": "Our volunteers are dedicatedly working for the organization.",
 
   "why_Donate": "Why Should You Donate to LSSF Trust?",
   "h1_Donate": "Education for All",
