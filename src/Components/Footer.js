@@ -171,7 +171,9 @@ const Footer = () => {
               </Text>
             </Link>
 
-            <Link to={"/terms"}>Terms and Conditions</Link>
+            <Link to={"/terms"}><Text fontFamily={"EkMukta"} fontWeight={600} fontSize={"0.9rem"}>
+                {t("Term_condi__heading1")}
+              </Text></Link>
 
 
             <Box>
@@ -303,7 +305,9 @@ const Footer = () => {
               </Text>
             </Link>
 
-          <Link to={"/privacy"}>Privacy</Link>
+          <Link to={"/privacy"}><Text fontFamily={"EkMukta"} fontWeight={600} fontSize={"0.9rem"}>
+                {t("Privacy_Policy")}
+              </Text></Link>
           </Flex>
 
           <Flex
