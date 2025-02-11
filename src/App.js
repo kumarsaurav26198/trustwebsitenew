@@ -12,6 +12,8 @@ import AnnualReport from "./Pages/Annual";
 import AppAnnual from "./Pages/AppAnnual";
 import WhyDonation from "./Components/Donate";
 import Provision from "./Pages/80g_12a";
+import Termsandcondition from "./Components/Termsandcondition";
+import PrivacyandPolicy from "./Components/PrivacyandPolicy";
 
 function App() {
   const location = useLocation();
@@ -39,6 +41,8 @@ function App() {
         <Route path="/annualreport" element={<AppAnnual />} />
         <Route path="/whydonation" element={<WhyDonation />} />
         <Route path="/provision" element={<Provision />} />
+        <Route path="/terms" element={<Termsandcondition />} />
+        <Route path="/privacy" element={<PrivacyandPolicy />} />
         
       </Routes>
       {!shouldHideHeaderFooter() && <Footer />}
