@@ -39,16 +39,12 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import axios from "axios";
+import { baseURL } from "../services /apiEndPoint";
 const Footer = () => {
   const [ userData, setUserData ] = useState(null);
   const { t } = useTranslation();
 
-  const Privacy_Policy_collection_items = t('Privacy_Policy_collection_items', {
-    returnObjects: true,
-  });
-  const Privacy_Policy_collection_items2 = t('Privacy_Policy_collection_items2', {
-    returnObjects: true,
-  });
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -57,11 +53,18 @@ const Footer = () => {
         // const response = await axios.get(
         //   "https://api.mbbsdunia.com/api/count"
         // );
+        // const response = await axios.get(
+        //   "https://api.lsstrust.org.in/api/count"
+        // );
+        const fullUrl = `${baseURL}${"count"}`;
+      console.log("fullUrl==>",fullUrl)
+
         const response = await axios.get(
-          "https://api.lsstrust.org.in/api/count"
+          fullUrl
+            // "http://localhost:3009/count"
         );
         // console.log("check", response.data);
-        setUserData(response.data);
+        setUserData(response?.data);
       } catch (error)
       {
         console.error("Error:", error);
@@ -71,9 +74,9 @@ const Footer = () => {
     fetchData();
   }, []);
 
-  const digits = userData?.totalVisits?.toString().split("")?.map(Number);
+  const todayVisitors = userData?.todayVisitors?.toString().split("")?.map(Number);
+  const totalVisitors = userData?.totalVisitors?.toString().split("")?.map(Number);
 
-  console.log("check", digits);
   const {
     isOpen: isOpenpnp,
     onOpen: onOpenpnp,
@@ -352,7 +355,7 @@ const Footer = () => {
                 <TfiWorld color="white" size={12} />
               </Box>
               <Text fontFamily={"EkMukta"} fontWeight={600} fontSize={"0.9rem"}>
-                www.lssftrust.com
+                www.lsstrust.org.in/
               </Text>
             </Flex>
           </Flex>
@@ -437,11 +440,36 @@ const Footer = () => {
                 Total Visitors
               </Text>
               <Grid
-                templateColumns={`repeat(${ digits?.length }, 1fr)`}
+                templateColumns={`repeat(${ userData?.totalVisitors }, 1fr)`}
                 gap={2}
                 justifyContent="center"
               >
-                {digits?.map((digit, index) => (
+                {totalVisitors?.map((digit, index) => (
+                  <Box
+                    key={index}
+                    borderRadius="md"
+                    borderWidth="1px"
+                    borderColor="#F56A02"
+                    color={"#F56A02"}
+                    textAlign="center"
+                    px={2}
+                    fontWeight={"bold"}
+                  >
+                    {digit}
+                  </Box>
+                ))}
+              </Grid>
+            </Flex>
+            <Flex mt={4} flexDirection="column" gap={2}>
+              <Text fontSize="16px" fontWeight="bold" color="#333">
+                Today Visitors
+              </Text>
+              <Grid
+                templateColumns={`repeat(${ userData?.totalVisitors }, 1fr)`}
+                gap={2}
+                justifyContent="center"
+              >
+                {todayVisitors?.map((digit, index) => (
                   <Box
                     key={index}
                     borderRadius="md"

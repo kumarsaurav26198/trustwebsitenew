@@ -1,33 +1,40 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
 
 const Termsandcondition = () => {
+  const { t } = useTranslation();
+
   return (
     <div style={{ backgroundColor: 'white', color: 'black', padding: '50px', fontFamily: 'Arial, sans-serif' }}>
-      <h1 style={{ textAlign: 'center', fontSize: '2rem', marginBottom: '20px' }}>Terms & Conditions</h1>
-      
-      <p>Welcome to <a href="http://www.lssftrust.org" style={{ color: 'black', textDecoration: 'underline' }}>www.lssftrust.org</a>. By using our website, you agree to comply with and be bound by the following terms and conditions:</p>
+      <h1 style={{ textAlign: 'center', fontSize: '2rem', marginBottom: '20px' }}>{t("Term_condi__heading1")}</h1>
 
-      <h2 style={{ fontSize: '1.5rem', marginTop: '20px', marginBottom: '10px' }}>1. Use of the Website</h2>
-      <p>The content on this Site is for general information and use only. It is subject to change without notice. You agree to use the Site for lawful purposes only.</p>
+      <p>{t("Term_condi__heading2")} <a href="http://www.lssftrust.org" style={{ color: 'black', textDecoration: 'underline' }}>www.lssftrust.org</a>.{t("Term_condi__heading3")}</p>
 
-      <h2 style={{ fontSize: '1.5rem', marginTop: '20px', marginBottom: '10px' }}>2. Intellectual Property</h2>
+      <h2 style={{ fontSize: '1.5rem', marginTop: '20px', marginBottom: '10px' }}>{t("Term_condi__collection_title")}</h2>
+      <p>{t("Term_condi__collection_content")}</p>
+
+      <h2 style={{ fontSize: '1.5rem', marginTop: '20px', marginBottom: '10px' }}>{t("Term_condi__use_title2")}</h2>
       <p>All materials on this Site, including text, images, and software, are the property of LSSF TRUST. Unauthorized use or reproduction is prohibited.</p>
 
-      <h2 style={{ fontSize: '1.5rem', marginTop: '20px', marginBottom: '10px' }}>3. Limitation of Liability</h2>
-      <p>LSSF TRUST does not warrant the accuracy, completeness, or suitability of the information on this Site for any particular purpose. Your use of the Site is at your own risk. We are not liable for any damages arising from your use of the Site.</p>
+      <h2 style={{ fontSize: '1.5rem', marginTop: '20px', marginBottom: '10px' }}>{t("Term_condi__use_title3")}</h2>
+      <p>{t("Term_condi__collection_content3")}</p>
 
-      <h2 style={{ fontSize: '1.5rem', marginTop: '20px', marginBottom: '10px' }}>4. External Links</h2>
-      <p>The Site may contain links to other websites. LSSF TRUST is not responsible for the content or privacy practices of these external sites.</p>
+      <h2 style={{ fontSize: '1.5rem', marginTop: '20px', marginBottom: '10px' }}>{t("Term_condi__use_title4")}</h2>
 
-      <h2 style={{ fontSize: '1.5rem', marginTop: '20px', marginBottom: '10px' }}>5. Governing Law</h2>
-      <p>These terms and conditions are governed by the laws of India. Any disputes arising from the use of the Site will be subject to the jurisdiction of the courts in India.</p>
+      <p>{t("Term_condi__collection_content4")}</p>
 
-      <h2 style={{ fontSize: '1.5rem', marginTop: '20px', marginBottom: '10px' }}>6. Changes to Terms & Conditions</h2>
-      <p>LSSF TRUST reserves the right to modify these terms and conditions at any time. Changes will be posted on this page with an updated effective date.</p>
+      <h2 style={{ fontSize: '1.5rem', marginTop: '20px', marginBottom: '10px' }}>{t("Term_condi__use_title5")}</h2>
 
-      <p>By using our Site, you agree to these terms and conditions. If you do not agree, please do not use our Site.</p>
+      <p>{t("Term_condi__collection_content5")}</p>
 
-      <p>For any questions or concerns, please contact us at <a href="http://www.lssftrust.org" style={{ color: 'black', textDecoration: 'underline' }}>www.lssftrust.org</a>.</p>
+
+      <h2 style={{ fontSize: '1.5rem', marginTop: '20px', marginBottom: '10px' }}>{t("Term_condi__use_title6")}</h2>
+
+      <p>{t("Term_condi__collection_content6")}</p>
+
+      <p>{t("Term_condi__by")}</p>
+
+      <p>{t("Term_condi__by2")}<a href="http://www.lssftrust.org" style={{ color: 'black', textDecoration: 'underline' }}> www.lssftrust.org</a>.</p>
     </div>
   );
 };
