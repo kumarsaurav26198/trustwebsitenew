@@ -21,7 +21,7 @@ export default function Navbar() {
       display={{ base: "none", lg: "block" }}
       bg="#FFFFFF"
       px={2}
-      width={{ base: "100%", lg: "92%" }}
+      width={{ base: "100%", lg: "100%" }}
       margin={"auto"}
       boxShadow={"md"}
       mt={-6}
@@ -56,8 +56,6 @@ export default function Navbar() {
                 className={isActive("/about")}
               >
                 {t('About')}
-
-
               </Text>
             </Link>
             <Link to={"/annual"}>

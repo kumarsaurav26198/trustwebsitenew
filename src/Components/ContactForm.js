@@ -15,6 +15,7 @@ import { SiMinutemailer } from "react-icons/si";
 import "./epilo.css";
 import "./header.css";
 import axios from "axios";
+import { baseURL } from "../services /apiEndPoint";
 const ContactForm = () => {
   const Toast = useToast();
   const [contact, setContact] = useState({
@@ -26,9 +27,12 @@ const ContactForm = () => {
   });
 
   const handleSubmit = async () => {
+    const fullUrl = `${baseURL}${"contactus"}`;
+    console.log("fullUrl==>",fullUrl)
     try {
       const res = await axios.post(
-        "https://api.lsstrust.org.in/api/contact",
+        fullUrl,
+        // "https://api.lsstrust.org.in/api/contact",
         contact
       );
   
